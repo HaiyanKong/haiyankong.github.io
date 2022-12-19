@@ -52,7 +52,7 @@ en = "/en/:year/:month/:day/:slug/"
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    favicon = "khy.ico"
+    favicon = "/khy.ico"
     GithubEdit = "https://github.com/HaiyanKong/haiyankong.github.io/edit/master/content/"
     copyright = "&copy;"
     copyrightYear = "2022-2023"
@@ -60,7 +60,7 @@ en = "/en/:year/:month/:day/:slug/"
     ContentSource = "https://raw.githubusercontent.com/HaiyanKong/haiyankong.github.io/master/content/" 
 
 [params.logo]
-  url = "111khy.png"
+  url = "khy.png"
   width = 50.0
   height = 50.0
   alt = "Haiyan Kong"
