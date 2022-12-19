@@ -1,6 +1,6 @@
-baseURL = "https://example.com/"
+baseURL = "https://haiyankong.github.io/"
 languageCode = "en-us"
-title = "Hugo-HT"
+title = "HaiyanKong"
 theme = "hugo-ht"
 footnotereturnlinkcontents = "↩"
 enableRobotsTXT = true
@@ -9,31 +9,39 @@ enableRobotsTXT = true
 [permalinks]
 cn = "/cn/:year/:month/:day/:slug/"
 en = "/en/:year/:month/:day/:slug/"
-posts = "/posts/:year/:month/:day/:slug/"
+# posts = "/posts/:year/:month/:day/:slug/"
 
 [[menu.en]]
     name = "Home"
     url = "/"
     weight = 1
 [[menu.en]]
-    name = "About"
-    url = "/en/about/"
+    name = "CV"
+    url = "/en/cv/"
     weight = 2
 [[menu.en]]
-    name = "Posts"
-    url = "/en/posts/"
+    name = "Publication"
+    url = "/en/publication/"
     weight = 3
 [[menu.en]]
-    name = "中文"
-    url = "/cn/posts/"
+    name = "Blog"
+    url = "/en/blog/"
     weight = 4
+[[menu.en]]
+    name = "APAD"
+    url = "/en/apad/"
+    weight = 5
+[[menu.en]]
+    name = "中文"
+    url = "/cn/"
+    weight = 6
 [[menu.cn]]
     name = "关于"
-    url = "/cn/about/"
+    url = "/cn/"
     weight = 1
 [[menu.cn]]
     name = "日志"
-    url = "/cn/posts/"
+    url = "/cn/blog/"
     weight = 2
 [[menu.cn]]
     name = "English"
@@ -41,36 +49,36 @@ posts = "/posts/:year/:month/:day/:slug/"
     weight = 3
 
 [params]
-    description = "Peronal website of Your Name"
-    homeText = "You just need a Hugo blog from scratch"
+    description = "Peronal Website of Haiyan Kong"
+    homeText = "Haiyan Kong's Peronal Website"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
-    blogDirName = "posts"
-    # singleLang = true
+    blogDirName = "blog"
+    singleLang = false
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    favicon = "media/hugo-logo.png"
+    favicon = "khy.ico"
     # Edit by yourself:
-    GithubEdit = "https://github.com/USERNAME/REPONAME/edit/master/content/"
+    GithubEdit = "https://github.com/HaiyanKong/haiyankong.github.io/edit/master/content/"
     copyright = "&copy;"
-    copyrightYear = "2020-2021"
+    copyrightYear = "2022-2023"
     # Edit by yourself:
-    GithubRepo = "https://github.com/USERNAME/REPONAME"
+    GithubRepo = "https://github.com/HaiyanKong/haiyankong.github.io"
     # Edit by yourself:
-    ContentSource = "https://raw.githubusercontent.com/USERNAME/REPONAME/master/content/" 
+    ContentSource = "https://raw.githubusercontent.com/HaiyanKong/haiyankong.github.io/master/content/" 
 
 [params.logo]
   # Change the logo picture as your prefer:
-  url = "media/hugo-logo.png" # you can change it
+  url = "khy.png" # you can change it
   width = 50.0
   height = 50.0
-  alt = "Hugo-ht"
+  alt = "Haiyan Kong"
 
 [params.lang]
 
     [params.lang.author]
-      en = "Your Name"
-      cn = "你的名字"
+      en = "Haiyan Kong"
+      cn = "孔海燕"
 
     [params.lang.madeWith]
       en = "Made with"
