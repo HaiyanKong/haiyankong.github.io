@@ -20,21 +20,17 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/en/cv/"
     weight = 2
 [[menu.en]]
-    name = "Publication"
-    url = "/en/publication/"
-    weight = 3
-[[menu.en]]
     name = "Blog"
     url = "/en/blog/"
-    weight = 4
+    weight = 3
 [[menu.en]]
     name = "APAD"
     url = "/en/apad/"
-    weight = 5
+    weight = 4
 [[menu.en]]
     name = "中文"
     url = "/cn/"
-    weight = 6
+    weight = 5
 [[menu.cn]]
     name = "关于"
     url = "/cn/"
@@ -51,25 +47,20 @@ en = "/en/:year/:month/:day/:slug/"
 [params]
     description = "Peronal Website of Haiyan Kong"
     homeText = "Haiyan Kong's Peronal Website"
-    # Please make sure `blogDirNmae` matches the name used in `menu` above:
     blogDirName = "blog"
     singleLang = false
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
     favicon = "khy.ico"
-    # Edit by yourself:
     GithubEdit = "https://github.com/HaiyanKong/haiyankong.github.io/edit/master/content/"
     copyright = "&copy;"
     copyrightYear = "2022-2023"
-    # Edit by yourself:
     GithubRepo = "https://github.com/HaiyanKong/haiyankong.github.io"
-    # Edit by yourself:
     ContentSource = "https://raw.githubusercontent.com/HaiyanKong/haiyankong.github.io/master/content/" 
 
 [params.logo]
-  # Change the logo picture as your prefer:
-  url = "khy.png" # you can change it
+  url = "/static/media/khy.png"
   width = 50.0
   height = 50.0
   alt = "Haiyan Kong"

@@ -73,7 +73,4 @@ Contact: hyan.kong@outlook.com
 
 - Online workshop for data processing of functional Near Infrared Spectroscopy (2022), [*mcbain*](http://www.mcbrain.cn/)
 - Online summer school for Computational Neuroscience (2021), [*Neuromatch Academy*](https://academy.neuromatch.io/)   
-{{<figure src="nma2021.png" title="certificate" width="300">}}  
 - Workshop for data processing of functional Near Infrared Spectroscopy (2020), [*Nanjing Siying Technology*](http://syfmri.cn/)
-
-***Update: Sep 2022***
