@@ -60,7 +60,7 @@ en = "/en/:year/:month/:day/:slug/"
     ContentSource = "https://raw.githubusercontent.com/HaiyanKong/haiyankong.github.io/master/content/" 
 
 [params.logo]
-  url = "/static/media/khy.png"
+  url = "111khy.png"
   width = 50.0
   height = 50.0
   alt = "Haiyan Kong"

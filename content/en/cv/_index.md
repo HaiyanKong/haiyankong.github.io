@@ -7,7 +7,6 @@ toc: true
 
 # Haiyan Kong
 Contact: hyan.kong@outlook.com
-<!-- Contact: [Email](/files/email.png) -->
 
 ## Education
 
