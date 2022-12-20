@@ -1,33 +1,27 @@
 ---
-title: "网站更新步骤记录"
+title: "Website Update Record"
 date: 2022-12-20
-author: 孔海燕
-slug: cn221220websiteupdate
+author: Haiyan Kong
+slug: en221220websiteupdate
 draft: false
 toc: false
 categories:
   - record
 tags:
   - tutrial
-  - Chinese
+  - English
 ---
 
 **update**
 ```
 cd /d/Hugo/quickstart
-
 bash deploy.sh
-
 git config --global --unset http.proxy
 git config --global --unset https.proxy
-
-bash deploy.sh
-
 git push
 ```
 
-
-**deploy.sh**
+**deploy.sh** ***contains:***
 ```
 git add .
 msg="updating site on $(date)" 
