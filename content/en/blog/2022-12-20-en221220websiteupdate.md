@@ -1,5 +1,5 @@
 ---
-title: "Website Update Record"
+title: "Website Update Record [draft]"
 date: 2022-12-20
 author: Haiyan Kong
 slug: en221220websiteupdate
@@ -19,6 +19,11 @@ bash deploy.sh
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 git push
+```
+
+**clone**
+```
+git clone --recursive link
 ```
 
 **deploy.sh** ***contains:***
