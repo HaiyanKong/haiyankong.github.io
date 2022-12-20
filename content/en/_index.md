@@ -1,7 +1,7 @@
 ---
-title: "English page"
-type : nolisting
+title: 'English Posts'
+date: ''
 ---
 
-### English homepage test 
+## Posts
 

@@ -9,35 +9,35 @@ enableRobotsTXT = true
 [permalinks]
 cn = "/cn/:year/:month/:day/:slug/"
 en = "/en/:year/:month/:day/:slug/"
-# posts = "/posts/:year/:month/:day/:slug/"
+# others = "/others/:year/:month/:day/:slug/"
 
 [[menu.en]]
     name = "Home"
     url = "/"
     weight = 1
 [[menu.en]]
-    name = "CV"
-    url = "/en/cv/"
+    name = "Vitae"
+    url = "/en-vitae/"
     weight = 2
 [[menu.en]]
     name = "Blog"
-    url = "/en/blog/"
+    url = "/en/"
     weight = 3
 [[menu.en]]
     name = "APAD"
-    url = "/en/apad/"
+    url = "/en-apad/"
     weight = 4
 [[menu.en]]
     name = "中文"
-    url = "/cn/"
+    url = "/cn-about/"
     weight = 5
 [[menu.cn]]
     name = "关于"
-    url = "/cn/"
+    url = "/cn-about/"
     weight = 1
 [[menu.cn]]
     name = "日志"
-    url = "/cn/blog/"
+    url = "/cn/"
     weight = 2
 [[menu.cn]]
     name = "English"
@@ -52,7 +52,7 @@ en = "/en/:year/:month/:day/:slug/"
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    favicon = "image/khy.ico"
+    favicon = "image/favicon.ico"
     GithubEdit = "https://github.com/HaiyanKong/haiyankong.github.io/edit/master/content/"
     copyright = "&copy;"
     copyrightYear = "2022-2023"
@@ -60,7 +60,7 @@ en = "/en/:year/:month/:day/:slug/"
     ContentSource = "https://raw.githubusercontent.com/HaiyanKong/haiyankong.github.io/master/content/" 
 
 [params.logo]
-  url = "image/khy.png"
+  url = "image/url.png"
   width = 50.0
   height = 50.0
   alt = "Haiyan Kong"
