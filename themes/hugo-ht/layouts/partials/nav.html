@@ -1,20 +1,16 @@
-<nav class="nav" >
-      <a href="{{ "/" | relURL }}" class="nav-logo">
-        <img src="{{ print "" .Site.Params.logo.url | relURL }}"
+<nav class="nav">
+  <a href="{{ "/" | relURL }}" class="nav-logo">
+    <img src="{{ print "images/" .Site.Params.logo.url | relURL }}"
          width="{{ .Site.Params.logo.width }}"
          height="{{ .Site.Params.logo.height }}"
          alt="{{ .Site.Params.logo.alt }}">
-      </a>
+  </a>
 
-      <ul class="nav-links" >
-        {{ if .IsHome }}
-        {{ range .Site.Menus.en }}
-           <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-        {{ end }}
-        {{ else }}
-        {{ range (default .Site.Menus.main (index .Site.Menus $.Section)) }}
-           <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-       {{ end }}
-       {{ end }}
-      </ul>
+  <ul class="nav-links">
+    {{ $currentPage := . }}
+    {{ $section := replaceRE "^/([^/]+)/.*" "$1" .URL }}
+    {{ range (default .Site.Menus.main (index .Site.Menus $section)) }}
+    <li class="{{ if eq .URL $currentPage.URL }}active{{ end }}"><a href="{{ .URL }}">{{ if .Pre }}<i class="fa fa-{{ .Pre }}" aria-hidden="true" title="{{ .Name }}"></i> {{ else }} {{ .Name }} {{ end }}</a></li>
+    {{ end }}
+  </ul>
 </nav>
