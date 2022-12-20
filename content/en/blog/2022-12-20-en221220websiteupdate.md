@@ -5,11 +5,8 @@ author: Haiyan Kong
 slug: en221220websiteupdate
 draft: false
 toc: false
-categories:
-  - record
-tags:
-  - tutrial
-  - English
+categories: record
+tags: tutrial
 ---
 
 **update**
