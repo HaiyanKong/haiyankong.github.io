@@ -1,6 +1,6 @@
 ---
-title: 'English Blog'
+title: 'Blog'
 date: ''
 ---
 
-
+# Blog
