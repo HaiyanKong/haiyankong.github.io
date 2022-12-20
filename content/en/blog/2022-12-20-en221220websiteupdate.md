@@ -1,14 +1,13 @@
 ---
-title: "Website Update Record [draft]"
+title: "Website Update Record"
 date: 2022-12-20
 author: Haiyan Kong
 slug: en221220websiteupdate
 draft: false
 toc: false
-categories: record
-tags: tutrial
+categories: tutrial
+tags: website
 ---
-
 **update**
 ```
 cd /d/Hugo/quickstart

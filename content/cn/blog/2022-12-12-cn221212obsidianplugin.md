@@ -4,11 +4,10 @@ date: 2022-12-12
 author: 孔海燕
 slug: cn221212obsidianplugin
 draft: false
-toc: true
-categories: record
-tags: tutrial, Obsidian, plugin
+toc: false
+categories: tutrial
+tags: Obsidian
 ---
-
 # 插件安利
 
 | Name | Description |  |
