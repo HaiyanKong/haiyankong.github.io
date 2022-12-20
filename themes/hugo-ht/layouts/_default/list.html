@@ -1,35 +1,44 @@
 {{ partial "header.html" . }}
 
-<main class="content" role="main">
+{{ $name := .Data.Plural -}}
+{{ if eq $name "tags" -}}
+<h1>#{{ .Title | markdownify }}</h1>
+{{ end }}
 
-  {{ if .Content }}
-  {{ if .Params.show_title }}
-  {{ partial "article_meta.html" . }}
-  {{ end }}
-  <article class="article">
-    <div class="article-content">
-      {{ .Content }}
-    </div>
-  </article>
-  {{ else }}
-  <div class="archive">
-    {{ range .Pages.GroupByDate "2006" }}
-    <h2 class="archive-title">{{ .Key }}</h2>
-    {{ range .Pages }}
-    <article class="archive-item">
-      <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a>
-      <span class="archive-item-date">
-        {{ .Date.Format "2006/01/02" }}
-      </span>
-    </article>
-    {{ end }}
-    {{ end }}
-  </div>
-  {{ end }}
-  {{if and .Content (not .IsHome) }}
-  {{ partial "disqus.html" .}}
-  {{ end }}
+<main class = "content">
 
+<div class="list-page">
+{{ .Content }}
+
+
+{{if not .IsHome}}
+<ul>
+  {{ range .Pages.GroupByDate "2006" }}
+  <h2 style="text-align: left;">{{ .Key }}</h2>
+  {{ range .Pages.GroupByDate "2006-01-02" }}
+  {{ range .Pages }}
+  <p>
+    <span class="date">
+    {{ .Date.Format "2006-01-02" }}
+    </span>
+    <a href="{{ .RelPermalink }}">
+    {{ .Title }}
+    </a>
+  </p>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+</ul>
+{{ end }}
+</div>
 </main>
 
-{{ partial "footer.html" . }}
+{{ partial "footer.html" . }} 
+
+<div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;
+margin-bottom: 10px">
+{{ if .IsHome}}
+{{ (index .Site.Params.lang.Sitelastupdate $.Site.Params.defaultLang) }}
+{{ .Site.LastChange.Format "2006-01-02" }}
+{{ end }}
+</div>
