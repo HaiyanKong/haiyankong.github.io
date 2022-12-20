@@ -1,6 +1,5 @@
 ---
 title: 
-date:''
 ---
 
 {{<figure src="/image/en-home-myself.jpg" title="About me" width="450">}}
