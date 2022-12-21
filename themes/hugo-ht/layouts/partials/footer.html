@@ -13,11 +13,12 @@
   {{ partial "foot_custom.html" . }}
      <ul class="footer-links">
       {{ if .IsHome }}
-       <li>
-        <a href='{{ . }}' class="footer-links-kudos" target="_blank"> 
-          {{ default (index $.Site.Params.Lang.sourceCode $.Site.Params.defaultLang) (index $.Site.Params.lang.sourceCode $.Section) }} 
-          <i class="fa fa-github" style="font-size: 24px"></i>
-        </a>
+       {{ with .Site.Params.singleLang }}
+       <li><a href="/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed">
+       {{ else }}
+       {{ with .Section }}
+       <li><a href="/{{ . }}/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed">
+       {{ default "Subscribe" (index $.Site.Params.lang.subscribe $.Section) }} </a>
        </li>
        {{ end }}
        {{ end }}
