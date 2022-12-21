@@ -12,11 +12,6 @@
 
   {{ partial "foot_custom.html" . }}
      <ul class="footer-links">
-      {{ if .IsHome }}
-       {{ with .Site.Params.singleLang }}
-       <li><a href="/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed"> </a>
-       </li>
-       {{ end }}
        {{ if not .IsHome }}
        {{ with .Site.Params.singleLang }}
        <li><a href="/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed">
