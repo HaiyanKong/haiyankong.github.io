@@ -12,6 +12,17 @@
 
   {{ partial "foot_custom.html" . }}
      <ul class="footer-links">
+      {{ if .IsHome }}
+       {{ with .Site.Params.GithubRepo}}
+       <li>
+        <a href='{{ . }}' class="footer-links-kudos" target="_blank"> 
+          {{ default (index $.Site.Params.Lang.sourceCode $.Site.Params.defaultLang) (index $.Site.Params.lang.sourceCode $.Section) }} 
+          <i class="fa fa-github" style="font-size: 24px"></i>
+        </a>
+       </li>
+       {{ end }}
+       {{ end }}
+       {{ if not .IsHome }}
        {{ with .Site.Params.singleLang }}
        <li><a href="/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed">
        {{ else }}
@@ -44,6 +55,3 @@
      </div>
 
 </footer>
-
-
-
