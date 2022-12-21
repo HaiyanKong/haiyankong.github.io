@@ -13,7 +13,6 @@
   {{ partial "foot_custom.html" . }}
      <ul class="footer-links">
       {{ if .IsHome }}
-       {{ with .Site.Params.GithubRepo}}
        <li>
         <a href='{{ . }}' class="footer-links-kudos" target="_blank"> 
           {{ default (index $.Site.Params.Lang.sourceCode $.Site.Params.defaultLang) (index $.Site.Params.lang.sourceCode $.Section) }} 
