@@ -1,0 +1,27 @@
+{
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "foldHeading": true,
+  "foldIndent": false,
+  "attachmentFolderPath": "./z-attachments",
+  "alwaysUpdateLinks": true,
+  "showFrontmatter": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "newFileLocation": "current",
+  "spellcheck": false,
+  "autoPairBrackets": false,
+  "legacyEditor": false,
+  "livePreview": true,
+  "fileSortOrder": "alphabetical",
+  "promptDelete": false,
+  "defaultViewMode": "source",
+  "rightToLeft": false,
+  "smartIndentList": true,
+  "showUnsupportedFiles": false,
+  "showInlineTitle": true
+}

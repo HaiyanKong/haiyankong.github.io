@@ -1,0 +1,58 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:Brain",
+      "color": {
+        "a": 1,
+        "rgb": 6083798
+      }
+    },
+    {
+      "query": "path:EEG",
+      "color": {
+        "a": 1,
+        "rgb": 6084208
+      }
+    },
+    {
+      "query": "path:fNIRS",
+      "color": {
+        "a": 1,
+        "rgb": 14440022
+      }
+    },
+    {
+      "query": "path:fMRI",
+      "color": {
+        "a": 1,
+        "rgb": 14606612
+      }
+    },
+    {
+      "query": "path:建模",
+      "color": {
+        "a": 1,
+        "rgb": 13836256
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": true,
+  "textFadeMultiplier": -3,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.297752808988764,
+  "repelStrength": 8.29213483146067,
+  "linkStrength": 0.234831460674157,
+  "linkDistance": 227,
+  "scale": 0.0984828026686444,
+  "close": true
+}

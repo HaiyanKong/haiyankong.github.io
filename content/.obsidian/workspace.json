@@ -1,0 +1,191 @@
+{
+  "main": {
+    "id": "5256402dced094d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "5b2adbfd3b488f42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "804138da2bea19b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "en/apad/_index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7c2cdb868c239c4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "13546b3658696f19",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b7de8d39f5e2c86c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "08bcf9a31e76f711",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e4679e97a4870d10",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "9bea9796b86a2d39",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "29a8bb5d3f647acd",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 201.5
+  },
+  "right": {
+    "id": "96cf91ff12300a43",
+    "type": "split",
+    "children": [
+      {
+        "id": "3fcd1906f8c716a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9ff7daa9f2b4941",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "en/apad/_index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c05b910806c1c8a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6abd501a79ba9bcc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "en/apad/_index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "c0fff5d425c6a037",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "en/apad/_index.md"
+              }
+            }
+          },
+          {
+            "id": "f10d1fc2912feeb0",
+            "type": "leaf",
+            "state": {
+              "type": "metatable-sidebar-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 324.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "command-palette:打开命令面板": false,
+      "audio-recorder:开始/结束录音": false,
+      "canvas:Create new canvas": false,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-metatable:Metatable": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false,
+      "templates:插入模板": false
+    }
+  },
+  "active": "804138da2bea19b1",
+  "lastOpenFiles": [
+    "en/apad/_index.md",
+    "draft/_index.md",
+    "en/apad.md",
+    "_index.md",
+    "en/blog/_index.md",
+    "en/blog/2022-12-20-en221220websiteupdate.md",
+    "en/blog/2022-12-19-en221219markdowntest.md",
+    "en/vitae/_index.md",
+    "z-mode/cnmode.md",
+    "z-mode/enmode.md"
+  ]
+}

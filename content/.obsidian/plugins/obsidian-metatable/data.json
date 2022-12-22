@@ -1,0 +1,15 @@
+{
+  "expansionMode": "expanded",
+  "ignoreNulls": false,
+  "nullValue": "",
+  "skipKey": "metatable",
+  "ignoredKeys": [],
+  "filterKeys": [
+    "Metatable",
+    "Formatter"
+  ],
+  "filterMode": "ignore",
+  "autolinks": false,
+  "naked": false,
+  "vault": null
+}

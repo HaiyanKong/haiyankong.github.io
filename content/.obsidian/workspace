@@ -1,0 +1,171 @@
+{
+  "main": {
+    "id": "5256402dced094d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "2187a6c0e81e555e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Z-Mode/DayRecord.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7c2cdb868c239c4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "13546b3658696f19",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b7de8d39f5e2c86c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "08bcf9a31e76f711",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e4679e97a4870d10",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "9bea9796b86a2d39",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "f74daa3edd1571f0",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 225.5
+  },
+  "right": {
+    "id": "96cf91ff12300a43",
+    "type": "split",
+    "children": [
+      {
+        "id": "3fcd1906f8c716a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9ff7daa9f2b4941",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Z-Mode/DayRecord.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c05b910806c1c8a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6abd501a79ba9bcc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Z-Mode/DayRecord.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "d74808385e17d014",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Z-Mode/DayRecord.md"
+              }
+            }
+          },
+          {
+            "id": "2499418f03e3bba0",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 286.5,
+    "collapsed": true
+  },
+  "active": "2187a6c0e81e555e",
+  "lastOpenFiles": [
+    "Z-Mode/DayRecord.md",
+    "DayRecord/delete.md",
+    "DayRecord/2022-12-02.md",
+    "2022-12-02.md",
+    "未命名/Drawing 2022-12-02 15.28.38.excalidraw.md",
+    "未命名/attachments/Pasted Image 20221202152921_340.jpg",
+    "readingnote/模板readingnote.md",
+    "readingnote/readingnoteView.md",
+    "Annoations/2022_McQuaid_Camouflaging in autism spectrum disorder：Examining the roles of sex, gender identity, and diagnosti_KEY-J963LTSX.md",
+    "Annoations/undefined_认知加工方式_认知加工方式对医疗健康不实信息辨别的影响——基于双加工理论的研究_KEY-K28FIMBJ.md"
+  ]
+}

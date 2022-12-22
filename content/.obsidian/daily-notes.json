@@ -1,0 +1,6 @@
+{
+  "folder": "tip",
+  "template": "z-mode/tipmode",
+  "autorun": false,
+  "format": "YYYYMMDD"
+}
