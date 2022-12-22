@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "draft/_index.md",
+                "file": "en/blog/2022-12-20-en221220websiteupdate.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "draft/_index.md",
+                "file": "en/blog/2022-12-20-en221220websiteupdate.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "draft/_index.md",
+                "file": "en/blog/2022-12-20-en221220websiteupdate.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "draft/_index.md"
+                "file": "en/blog/2022-12-20-en221220websiteupdate.md"
               }
             }
           },
@@ -177,12 +177,12 @@
   },
   "active": "804138da2bea19b1",
   "lastOpenFiles": [
-    "en/blog/2022-12-20-en221220websiteupdate.md",
-    "en/vitae/_index.md",
-    "en/apad/_index.md",
     "en/blog/2022-12-19-en221219markdowntest.md",
-    "en/blog/_index.md",
+    "en/blog/2022-12-20-en221220websiteupdate.md",
+    "en/apad/_index.md",
     "draft/_index.md",
+    "en/vitae/_index.md",
+    "en/blog/_index.md",
     "blogmode/cnmode.md",
     "blogmode/enmode.md",
     "_index.md",
