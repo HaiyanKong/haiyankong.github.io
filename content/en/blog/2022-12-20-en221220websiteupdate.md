@@ -30,7 +30,7 @@ git commit -m "$msg"
 git push origin master
 ```
 
-*git  error: failed to push some refs to ‘https://github.com/...*
+**git  error: failed to push some refs to ‘https://github.com/...**
 ```
 git pull --rebase origin master
 ```

@@ -21,7 +21,7 @@ Email: hyan.kong@outlook.com
 
 ## Skills
 
-### Software & Programming
+### Programming & Software
 
 R, MATLAB, Python, Psychopy, E-Prime, SPSS, Adobe Photoshop and Premiere
 
@@ -32,15 +32,14 @@ fNIRS, EEG
 ## Teaching Experiences
 
 **2022.02-2022.06: R Language and Its Application in Psychological Research (Graduate Level)**
-- Teaching Assistant (Professor: Hu Chuan-Peng)
-- Responsibilities included preparing materials related to the course, correcting homework, and tutoring students.
+- Teaching Assistant
+- Lecture: Prof. Hu Chuan-Peng
 - Affiliation: Nanjing Normal University, Nanjing, Jiangsu Province, China
 
 **2021.06: R Language Training Courses**
-- Teaching Assistant (Professor: Hu Chuan-Peng)
-- Responsibilities included tutoring students and answering questions after class
+- Teaching Assistant
+- Lecture: Prof. Hu Chuan-Peng
 - Affiliation: Jiangsu Psychological Society, Nanjing, Jiangsu Province, China
-- Project link: *[https://osf.io/k5sg6/](https://osf.io/k5sg6/)*
 
 ## Additional Training
 - Online workshop for data processing of functional Near Infrared Spectroscopy (2022), [*mcbain*](http://www.mcbrain.cn/)
