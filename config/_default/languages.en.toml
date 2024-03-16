@@ -1,0 +1,68 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+
+title = "Haiyan Kong"
+# copyright = "Haiyan Kong"
+
+[params]
+  isoCode = "en"
+  displayName = ":EN:"
+  rtl = false
+  dateFormat = "2 January 2006"
+  # mainSections = ["section1", "section2"]
+  # description = "Personal website of Haiyan Kong."
+
+[author]
+  name = "Haiyan Kong"
+  namecopyright = "Haiyan Kong"
+  image = "img/khy.jpg"
+  headlinename = "Haiyan Kong (孔海燕)"
+  headlineintro = "Haiyan Kong (孔海燕)"
+  headlinemail = "haiyankong [at] hotmail [dot] com"
+  # bio = "Personal website of Haiyan Kong."  # displayed in article footers.
+  links = [
+     { google-scholar = "https://scholar.google.com/citations?user=-BuNrlEAAAAJ&hl=en&oi=sra" },
+     { orcid = "https://orcid.org/0000-0003-1297-4534" },
+     { github = "https://github.com/HaiyanKong" },
+     { mastodon = "https://sciences.social/@haiyankong" },
+     { bluesky = "https://bsky.app/profile/haiyankong.bsky.social/" },
+     { rss = "https://haiyankong.github.io/index.xml" },
+  #   { x-twitter = "https://twitter.com/haiyan_kong" }
+  #   { link = "https://link-to-some-website.com/" },
+  #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
+  #   { apple = "https://www.apple.com" },
+  #   { blogger = "https://username.blogspot.com/" },
+  #   { codepen = "https://codepen.io/username" },
+  #   { dev = "https://dev.to/username" },
+  #   { discord = "https://discord.gg/invitecode" },
+  #   { dribbble = "https://dribbble.com/username" },
+  #   { facebook = "https://facebook.com/username" },
+  #   { flickr = "https://www.flickr.com/photos/username/" },
+  #   { foursquare = "https://foursquare.com/username" },
+  #   { gitlab = "https://gitlab.com/username" },
+  #   { google = "https://www.google.com/" },
+  #   { hashnode = "https://username.hashnode.dev" },
+  #   { instagram = "https://instagram.com/username" },
+  #   { keybase = "https://keybase.io/username" },
+  #   { kickstarter = "https://www.kickstarter.com/profile/username" },
+  #   { lastfm = "https://lastfm.com/user/username" },
+  #   { linkedin = "https://linkedin.com/in/haiyankong" },
+  #   { medium = "https://medium.com/username" },
+  #   { microsoft = "https://www.microsoft.com/" },
+  #   { patreon = "https://www.patreon.com/username" },
+  #   { pinterest = "https://pinterest.com/username" },
+  #   { reddit = "https://reddit.com/user/username" },
+  #   { researchgate = "https://www.researchgate.net/profile/username" },
+  #   { slack = "https://workspace.url/team/userid" },
+  #   { snapchat = "https://snapchat.com/add/username" },
+  #   { soundcloud = "https://soundcloud.com/username" },
+  #   { stack-overflow = "https://stackoverflow.com/users/userid/username" },
+  #   { steam = "https://steamcommunity.com/profiles/userid" },
+  #   { telegram = "https://t.me/username" },
+  #   { tiktok = "https://tiktok.com/@username" },
+  #   { tumblr = "https://username.tumblr.com" },
+  #   { twitch = "https://twitch.tv/username" },
+  #   { whatsapp = "https://wa.me/phone-number" },
+  #   { youtube = "https://youtube.com/username" }
+  ]

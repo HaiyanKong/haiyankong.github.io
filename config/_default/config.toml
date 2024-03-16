@@ -1,0 +1,14 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+# theme = congo
+baseURL = "https://haiyankong.github.io/"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+paginate = 500  # The number of articles listed on each page of the article listing.
+summaryLength = 0
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

@@ -1,0 +1,88 @@
+<footer class="py-10 print:hidden">
+
+  
+  <style>
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .font-sans {
+      font-size: 12.5px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  </style>
+
+  {{/* Comment */}}
+  {{ if and (not .IsSection) (not .IsHome) }}
+    <script src="https://utteranc.es/client.js"
+            repo="HaiyanKong/haiyankong.github.io"
+            issue-term="pathname"
+            label="Comment"
+            theme="boxy-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  {{ end }}
+
+  {{/* Visitor */}}
+  <div class="centered">
+    {{ if .IsHome }}
+    <div style="display:inline-block;width:144px;">
+      <script type="text/javascript" src="//rf.revolvermaps.com/0/0/9.js?i=5lmongnk5ft&amp;t=%C2%A9HaiyanKong" async="async"></script>
+      {{/* <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=70&t=n&d=jm0LN8PKb6m26XUztLNVEyPjMmSvb5HkciioiudinMI&co=ffffff&cmo=ffffff&cmn=ffffff'></script> */}}
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* Footer menu */}}
+  <div class="flex-container">
+    <div class="flex items-center">
+    </div>
+
+  {{/* Tags */}}
+  <div class="flex items-center">
+    {{ if .IsHome }}
+    {{ if .Site.Menus.footer }}
+      <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+        <ul class="flex list-none flex-col sm:flex-row">
+          {{ range .Site.Menus.footer }}
+            <li class="group mb-1 ltr:text-right rtl:text-left sm:mb-0 sm:me-7 sm:last:me-0">
+                <a href="{{ .URL }}"
+                  title="{{ .Title }}"
+                  {{ with .Params.target }}target="{{ . }}"{{ end }}>
+                  {{- if .Params.showName | default true -}}
+                    <span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >{{ .Name | markdownify | emojify }}</span>
+                  {{ end }}
+                </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+</div>
+
+
+  {{/* GitHub Code Record */}}
+  <!-- <div class="centered">
+   <img src="http://ghchart.rshah.org/HaiyanKong" alt="HaiyanKong's Github chart" />
+  </div> -->
+
+  
+  {{/* Extend footer - eg. for extra scripts, etc. */}}
+  {{ if templates.Exists "partials/extend-footer.html" }}
+    {{ partial "extend-footer.html" . }}
+  {{ end }}
+
+</footer>
