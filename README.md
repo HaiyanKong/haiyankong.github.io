@@ -69,5 +69,5 @@ hugo server -D
 │  ├─file: files for sharing
 │  └─store: draft store
 │              
-└─themes: Hugo Theme
+└─themes: congo
 ```
