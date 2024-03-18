@@ -1,5 +1,5 @@
 ---
-title: "Install Samsung Notes on Windows"
+title: "Install Samsung notes on Windows"
 date: 2023-01-22
 author: Haiyan Kong
 slug: 20230122/samsungnotewindows

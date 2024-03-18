@@ -1,5 +1,5 @@
 ---
-title: "My LaTex Learning Note"
+title: "LaTex learning note"
 date: 2022-12-27
 author: Haiyan Kong
 slug: 20221227/latexlearning

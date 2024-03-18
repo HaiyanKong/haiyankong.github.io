@@ -16,19 +16,14 @@
   weight = 10
 
 [[main]]
-  name = "About"
-  url = "/about"
-  weight = 20
-
-[[main]]
   name = "Blog"
   url = "/blog"
-  weight = 30
+  weight = 20
 
 [[main]]
   name = "Gallery"
   url = "https://haiyankong.notion.site/b7db99d5b0964c5c814ac0799cac98cb"
-  weight = 40
+  weight = 30
   [main.params]
     showName = true
     target = "_blank"
@@ -36,12 +31,12 @@
 #[[main]]
 #  name = "中文"
 #  url = "/cn"
-#  weight = 50
+#  weight = 40
 
 #[[main]]
 #  name = "RSS"
 #  url = "https://haiyankong.github.io/index.xml"
-#  weight = 60
+#  weight = 50
 #  [main.params]
 #    showName = true
 #    target = "_blank"
@@ -49,7 +44,7 @@
 #[[main]]
 #  name = "Code"
 #  url = "https://github.com/HaiyanKong/haiyankong.github.io"
-#  weight = 70
+#  weight = 60
 #  [main.params]
 #    icon = "github"
 #    showName = false

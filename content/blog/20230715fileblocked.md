@@ -1,5 +1,5 @@
 ---
-title: "Resolve “File In Use” or “Folder In Use” "
+title: "Resolve “file in use” or “folder in use” "
 date: 2023-07-15
 author: Haiyan Kong
 slug: 20230715/fileblocked

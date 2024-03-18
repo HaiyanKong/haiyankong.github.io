@@ -1,5 +1,5 @@
 ---
-title: "Automatically Display RGB Colors in VS Code"
+title: "Automatically display RGB colors in Visual Studio Code"
 date: 2023-08-29
 author: Haiyan Kong
 slug: 20230829/vscodeautorgb

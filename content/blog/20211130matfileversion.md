@@ -1,5 +1,5 @@
 ---
-title: "MATLAB Warning: Saving Variables to Older MAT-File Versions"
+title: "MATLAB warning: saving variables to older MAT-file versions"
 date: 2021-11-30
 author: Haiyan Kong
 slug: 20211130/matfileversion
