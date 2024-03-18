@@ -116,5 +116,5 @@ year + auth(n=0,m=1,creator="*",initials=false).fold.lower + "'_'" + shorttitle(
 - [Zotero 插件下载](https://plugins.zotero-chinese.com/#/?id=zotero-插件下载)
 
 {{< badge "edit" >}}
-Update: 29 February 2023
+Update: 29 February 2024
 {{< /badge >}}
