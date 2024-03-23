@@ -25,10 +25,10 @@ title = "Haiyan Kong"
      { google-scholar = "https://scholar.google.com/citations?user=-BuNrlEAAAAJ&hl=en&oi=sra" },
      { orcid = "https://orcid.org/0000-0003-1297-4534" },
      { github = "https://github.com/HaiyanKong" },
+     { x-twitter = "https://twitter.com/haiyan_kong" },
      { mastodon = "https://sciences.social/@haiyankong" },
      { bluesky = "https://bsky.app/profile/haiyankong.bsky.social/" },
-     { rss = "https://haiyankong.github.io/index.xml" },
-  #   { x-twitter = "https://twitter.com/haiyan_kong" }
+     { rss = "https://haiyankong.github.io/index.xml" }
   #   { link = "https://link-to-some-website.com/" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
   #   { apple = "https://www.apple.com" },
