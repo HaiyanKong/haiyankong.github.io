@@ -26,7 +26,7 @@ Sync Obsidian note between Windows and Android for free by Foldersync + WebDAV.
 - Click the “Acquire current key”, and then fill a name in the blank. Copy the key.
   - *Note: we will use the information in Figure 1.*
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-1.png" caption="Figure 1" width="350">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-1.png" caption="Figure 1" width="350">}}
 
 ## Step3: Set authorization in FolderSync
 
@@ -34,13 +34,13 @@ Sync Obsidian note between Windows and Android for free by Foldersync + WebDAV.
 - Then, choose the “WebDav” for the account type
 - Fill the blank in Figure 2 using the information in Figure 1
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-2.png" caption="Figure 2" width="350">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-2.png" caption="Figure 2" width="350">}}
 
 ## Step4: Sync your Obsidian folder to Nutstore in Windows
 
 - Sync your Obsidian folder to Nutstore in Windows like Figure 3. Then you will see the folder in nutstore.
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-3.png" caption="Figure 3"  width="500">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-3.png" caption="Figure 3"  width="500">}}
 
 ## Step5: Build a folder to sync the Obsidian folder in Windows
 
@@ -51,9 +51,9 @@ Sync Obsidian note between Windows and Android for free by Foldersync + WebDAV.
 - Back to FolderSync - “account”. Choose “Folderpair”.
 - Follow the settings in Figure 4. You can refer my example settings in Figure 5.
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-4.png" caption="Figure 4"  width="500">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-4.png" caption="Figure 4"  width="500">}}
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-5.png" caption="Figure 5"  width="300">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-5.png" caption="Figure 5"  width="300">}}
 
 ## Step7: Set basic items in FolderSync
 
@@ -63,17 +63,17 @@ Sync Obsidian note between Windows and Android for free by Foldersync + WebDAV.
 
 - Choose the “Sync” after the settings in Step7, click “Sync” in Figure 6, and wait for a while. If the blue box turn to green like Figure 7, your synchronization is successful. You can also click the little icon in Figure 7, where shows synchronization details.
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-6.png" caption="Figure 6"  width="300">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-6.png" caption="Figure 6"  width="300">}}
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-7.png" caption="Figure 7"  width="300">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-7.png" caption="Figure 7"  width="300">}}
 
 ## Step9: Open the synchronization folder in the Android Obsidian
 
 - Follow the settings in Figure 8 to Figure 9. Then you can see all the files in your smartphone!
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-8.png" caption="Figure 8"  width="300">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-8.png" caption="Figure 8"  width="300">}}
 
-{{<figure src="/blog/en/20230123obsidianandroid/20230123obsidianandroid-9.png" caption="Figure 9"  width="300">}}
+{{<figure src="/image/blog/20230123obsidianandroid/20230123obsidianandroid-9.png" caption="Figure 9"  width="300">}}
 
 ## Reference
 

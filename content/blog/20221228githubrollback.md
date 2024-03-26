@@ -18,13 +18,13 @@ If you want to rollback project files to where they were before the last commit 
 
 Choose **the project** you want to rollback in GitHub Desktop, as presented in Figure 1.
 
-{{<figure src="/blog/en/20221228githubrollback/20221228githubrollback-1.png" caption="Figure 1" width="800">}}
+{{<figure src="/image/blog/20221228githubrollback/20221228githubrollback-1.png" caption="Figure 1" width="800">}}
 
 **Step 2**
 
 Click the **History** in Figure 2, find the newest commit, and click right mouse button, and choose **Revert changes in commit**.
 
-{{<figure src="/blog/en/20221228githubrollback/20221228githubrollback-2.png" caption="Figure 2" width="800">}}
+{{<figure src="/image/blog/20221228githubrollback/20221228githubrollback-2.png" caption="Figure 2" width="800">}}
 
 **Step 3**
 
@@ -32,13 +32,13 @@ If you completed step 2 successfully, you will see the changes like Figure 3 **g
 
 Click the **Changes**.
 
-{{<figure src="/blog/en/20221228githubrollback/20221228githubrollback-3.png" caption="Figure 3" width="800">}}
+{{<figure src="/image/blog/20221228githubrollback/20221228githubrollback-3.png" caption="Figure 3" width="800">}}
 
 **Step4**
 
 Click the **Push origin**. Then you will get your original project before the committed.
 
-{{<figure src="/blog/en/20221228githubrollback/20221228githubrollback-4.png" caption="Figure 4" width="800">}}
+{{<figure src="/image/blog/20221228githubrollback/20221228githubrollback-4.png" caption="Figure 4" width="800">}}
 
 **Reference**
 

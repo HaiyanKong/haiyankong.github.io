@@ -34,14 +34,6 @@
 #  weight = 40
 
 #[[main]]
-#  name = "RSS"
-#  url = "https://haiyankong.github.io/index.xml"
-#  weight = 50
-#  [main.params]
-#    showName = true
-#    target = "_blank"
-
-#[[main]]
 #  name = "Code"
 #  url = "https://github.com/HaiyanKong/haiyankong.github.io"
 #  weight = 60

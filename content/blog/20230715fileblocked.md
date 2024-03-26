@@ -25,7 +25,7 @@ Download it from the website [https://lockhunter.com/](https://lockhunter.com/),
 
 
 
-{{<figure src="/blog/en/20230715fileblocked/20230715fileblocked-1.png" caption="Figure 1" width="400">}}
+{{<figure src="/image/blog/20230715fileblocked/20230715fileblocked-1.png" caption="Figure 1" width="400">}}
 
 
 
@@ -33,7 +33,7 @@ Just drag the file or folder you want to unlock into the window like Figure 1, t
 
 
 
-{{<figure src="/blog/en/20230715fileblocked/20230715fileblocked-2.png" caption="Figure 2" width="450">}}
+{{<figure src="/image/blog/20230715fileblocked/20230715fileblocked-2.png" caption="Figure 2" width="450">}}
 
 
 

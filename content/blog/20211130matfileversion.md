@@ -29,4 +29,4 @@ To resolve this issue, you can follow these steps:
 
 
 
-{{<figure src="/blog/en/20211130matfileversion/20211130matfileversion-1.png" caption="Figure 1" width="400">}}
+{{<figure src="/image/blog/20211130matfileversion/20211130matfileversion-1.png" caption="Figure 1" width="400">}}

@@ -24,9 +24,7 @@ tags: latex
 
 ## Split
 
-`\\noindent\\hfil$*$\\hfil$*$\\hfil$*$\\hfil$*$\\hfil$*$\\hfil$*$\\hfil$*$\\hfil`
-
-`\\rule[10pt]{7.5cm}{0.05em}`
+\\rule[10pt]{7.5cm}{0.05em}
 
 ## Spcae
 
