@@ -1,0 +1,3 @@
+[submodule "themes/hugo-sewing"]
+	path = themes/hugo-sewing
+	url = https://github.com/HaiyanKong/hugo-sewing.git
