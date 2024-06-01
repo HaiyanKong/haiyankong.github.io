@@ -76,7 +76,7 @@ project:
     description: "Hugo Sewing is a Hugo Template for static website that I created. My current website is based on this template. It is a simple, clean and flexible Hugo theme for both personal blog, group website, and academic website."
     links:
       -
-        name: Website
+        name: Demo site
         url: "https://haiyankong.github.io/hugo-sewing-demo/"
       -
         name: Code
