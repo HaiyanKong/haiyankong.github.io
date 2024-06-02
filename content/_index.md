@@ -70,17 +70,13 @@ publication:
 
 project:
   - 
-    image: /project/hugo-sewing.jpg
-    bigtitle: "Hugo Sewing"
-    title: "A simple, clean and flexible Hugo theme"
-    description: "Hugo Sewing is a Hugo template for static website that I created. My current website is based on this template. It is a simple, clean and flexible Hugo theme for both personal blog, group website, and academic website."
+    image: /project/hugo-sewing-screen.png
+    title: "Hugo Sewing: A simple, clean and flexible Hugo theme"
+    description: "Hugo Sewing is a Hugo template for static websites that I created. My current website is based on this template. It is a simple, clean, and flexible theme suitable for personal blogs, group websites, and academic websites."
     links:
       -
         name: Demo site
         url: "https://haiyankong.github.io/hugo-sewing-demo/"
-      -
-        name: Template
-        url: "https://github.com/HaiyanKong/hugo-sewing-demo"
       -
         name: Theme code
         url: "https://github.com/HaiyanKong/hugo-sewing"
