@@ -15,9 +15,8 @@ disableKinds = ["GitInfo"]
     weight = 1
 [[menu.main]]
     name = "Gallery"
-    url = "https://haiyankong.notion.site/Gallery-b7db99d5b0964c5c814ac0799cac98cb"
+    url = "/gallery/"
     weight = 2
-    target = "_blank"
 
 [markup.goldmark.renderer]
 unsafe= true
