@@ -11,7 +11,7 @@ people:
     description: |
       Welcome to my website!
       
-      I am currently a research assistant at the <a href="http://english.psych.cas.cn/"  role="button" target="_blank">Institute of Psychology, Chinese Academy Sciences</a>. Before that, I graduated with the Master of Philosophy degree in Psychology from <a href="https://en.njnu.edu.cn/"  role="button" target="_blank">Nanjing Normal University</a> of China in 2023. Learn more about me: <a href="/info/cv_haiyankong.pdf" role="button" target="_blank">Download CV</a>.
+      I am currently a research assistant at the <a href="http://english.psych.cas.cn/"  role="button" target="_blank">Institute of Psychology, Chinese Academy Sciences</a>. Before that, I graduated with the Master of Philosophy degree in Psychology from <a href="https://en.njnu.edu.cn/"  role="button" target="_blank">Nanjing Normal University</a> of China in 2023. Learn more about me: <a href="https://haiyankong.github.io/cv/" role="button" target="_blank">CV</a>.
     email: haiyankong@hotmail.com
     links: 
       -
