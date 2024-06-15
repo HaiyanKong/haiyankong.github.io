@@ -72,7 +72,7 @@ project:
   - 
     image: /project/hugo-sewing-screen.png
     title: "Hugo Sewing: A simple, clean and flexible Hugo theme"
-    description: "Hugo Sewing is a Hugo template for static websites that I created. My current website is based on this template. It is a simple, clean, and flexible theme suitable for personal blogs, group websites, and academic websites."
+    description: "Hugo Sewing is a Hugo theme for static websites that I created. My current website is based on this theme. It is a simple, clean, and flexible website theme suitable for personal blogs, group websites, and academic websites. Feel free to use Hugo Sewing to build your website!"
     links:
       -
         name: Demo site

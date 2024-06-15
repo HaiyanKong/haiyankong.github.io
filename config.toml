@@ -1,7 +1,7 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = "Haiyan Kong"   # will show in the Browser Tab
-theme = 'hugo-sewing'
+theme = ["hugo-notice", "hugo-sewing"]
 DefaultContentLanguage = "en"   # Theme's display language, supports: en, zh
 footnotereturnlinkcontents = "↩"
 pygmentsuseclasses = true 
