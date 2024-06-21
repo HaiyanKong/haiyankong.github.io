@@ -20,11 +20,6 @@ people:
         icon: "fa-brands fa-google-scholar fa-2xl"
         color: "color: #4D90FE"
       -
-        name: researchgate
-        url: "https://www.researchgate.net/profile/Haiyan-Kong-8"
-        icon: "fa-brands fa-researchgate fa-2xl"
-        color: "color: #33C5B4"
-      -
         name: orcid
         url: "https://orcid.org/0000-0003-1297-4534"
         icon: "fa-brands fa-orcid fa-2xl"
@@ -39,16 +34,7 @@ people:
         url: "https://twitter.com/haiyan_kong"
         icon: "fa-brands fa-x-twitter fa-2xl"
         color: "color: #0F1419"
-      -
-        name: mastodon
-        url: "https://sciences.social/@haiyankong"
-        icon: "fa-brands fa-mastodon fa-2xl"
-        color: "color: #6364FF"
-      -
-        name: bluesky
-        url: "https://bsky.app/profile/haiyankong.bsky.social"
-        icon: "fa-brands fa-bluesky fa-2xl"
-        color: "color: #0085FF;"
+
 
 publication:
   - 
