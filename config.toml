@@ -15,7 +15,7 @@ disableKinds = ["GitInfo"]
     weight = 1
 [[menu.main]]
     name = "Gallery"
-    url = "/galleryy/"
+    url = "/photo/"
     weight = 2
 
 [markup.goldmark.renderer]
