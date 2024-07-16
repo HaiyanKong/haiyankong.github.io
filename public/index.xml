@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Haiyan Kong</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Home on Haiyan Kong</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gallery</title>
+      <link>//localhost:1313/galleryy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/galleryy/</guid>
+      <description>Cute cats in my school, Nanjing Normal University Sunflowers I planted in 2023 Spring </description>
+    </item>
+    <item>
+      <title>Test Page</title>
+      <link>//localhost:1313/testpage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/testpage/</guid>
+      <description>This page is for style tesing.&#xA;Note&#xA;This is a very good note.&#xA;Warning&#xA;This is a warning notice. Be warned!&#xA;Tip&#xA;This is a very good tip.&#xA;Info&#xA;This is a very good info.&#xA;Haiyan Kong | 孔海燕 Welcome to my website! About me I am currently a research assistant at the Institute of Psychology, Chinese Academy Sciences. Before that, I graduated with the Master of Philosophy degree in Psychology from Nanjing Normal University of China in 2023.</description>
+    </item>
+  </channel>
+</rss>
