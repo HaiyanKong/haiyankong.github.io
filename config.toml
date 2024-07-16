@@ -1,0 +1,72 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = "Haiyan Kong"   # will show in the Browser Tab
+theme = ["hugo-shortcode-gallery", "hugo-notice", "hugo-sewing"]
+DefaultContentLanguage = "en"   # Theme's display language, supports: en, zh
+footnotereturnlinkcontents = "↩"
+pygmentsuseclasses = true 
+staticDir = ["static"]
+#enableGitInfo = true
+disableKinds = ["GitInfo"]
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "Gallery"
+    url = "/galleryy/"
+    weight = 2
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[frontmatter]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+
+
+[params]
+    authorName = "Haiyan Kong"   # will show in the copyright
+    enableTheme = true   # whether to display Theme information
+    enableVisitor = true   # whether to display visitor information
+    enableUpdated = false   # whether to display updating date information
+    enableMemo = false   # whether to display memos
+    enableGiscus = true   # whether to display comment in blog and contact
+    enableimgloop = true
+    toc = true   # whether to display table of contents in blog
+
+    [permalinks]
+        blog = "/blog/:year/:month/:slug/"
+
+    [params.Theme]
+        url = "https://github.com/HaiyanKong/hugo-sewing"
+        name = "Hugo Sewing"
+
+    [params.visitor]
+        src = "//rf.revolvermaps.com/0/0/9.js?i=5lmongnk5ft"
+
+    [params.memo]
+        memos = ""
+        limit = ""
+        creatorId = ""
+        domId = ""
+        twiEnv = ""
+
+    [params.giscus]
+        data_repo="haiyankong/haiyankong.github.io"
+        data_repo_id="R_kgDOMDa5jA"
+        data_category="Announcements"
+        data_category_id="DIC_kwDOMDa5jM4CfxuW"
+        data_mapping="pathname"
+        data_strict="0"
+        data_reactions_enabled="1"
+        data_emit_metadata="0"
+        data_input_position="top"
+        data_theme="noborder_light"
+        data_lang="en"
+        crossorigin="anonymous"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      linkify = false

@@ -1,0 +1,84 @@
+{{- $date := .Get "date" -}} {{- $title := .Get "title" -}} {{- $description := .Get "description" -}} {{- $tags := .Get "tags" -}}
+
+<div class="timeline__row">
+    <div class="timeline__time">
+        <div class="timeline__time">{{ $date }}</div>
+        <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+        <div class="timeline__description">
+            {{ $description | markdownify }}
+        </div>
+    </div>
+</div>
+
+<style>
+    .timeline__row {
+        display: flex;
+        /* padding-left: 5%; */
+        /* height: 100px; */
+    }
+    
+    .timeline__time {
+        /* flex: 0 0 120px 120px; */
+        color: #000000;
+        font-size: 16px;
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .timeline__split-line {
+        position: absolute;
+        right: -20px;
+        height: 100%;
+        width: 2px;
+        background-color: #0D6EFD;
+        z-index: 0;
+    }
+    
+    .timeline__split-line:before {
+        content: "";
+        position: absolute;
+        top: 15%;
+        right: -4px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: #0D6EFD;
+        box-shadow: 0 0 0 4px var(--theme);
+        border-radius: 50%;
+        border: 0px solid #0D6EFD;
+        z-index: -1;
+    }
+    
+    .timeline__content {
+        font-size: 16px;
+        position: relative;
+        flex: 1;
+        margin-left: 2rem;
+        padding: 0 0 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .timeline__description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 0 0 1rem;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .timeline__time {
+            font-size: 14px;
+        }
+        .timeline__description {
+            font-size: 14px;
+        }
+    }
+</style>
