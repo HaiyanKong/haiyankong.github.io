@@ -1,0 +1,42 @@
+  </div>
+  </div>
+  <footer>
+  {{ partial "foot_custom.html" . }}
+
+    {{if .IsHome }}
+      <small>
+        <span class="ml-2">© {{ .Site.Params.authorName}} {{ now.Format "2006" }}</span>
+
+        <br>
+        {{ if .Site.Params.enableTheme }}
+        {{ i18n "powered_by" | default "Powered by" }} <a href="{{ .Site.Params.theme.url}}">{{ .Site.Params.theme.name}}</a>
+        {{ end }}
+
+        <br>
+        {{ if .Site.Params.enableVisitor }}
+          <script type="text/javascript" 
+          src="{{ .Site.Params.visitor.src}}"
+          async="async">
+          </script>
+        {{ end }}
+
+        <br>
+        {{ if .Site.Params.enableUpdated }}
+        {{ i18n "last_updated" | default "Last updated: " }}{{ .Lastmod.Format (i18n "format_date_footer") }}
+        {{ end }}
+      </small>
+
+    {{end}}
+
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      diameter: 56,
+      backgroundColor: '#0D6EFD',
+      textColor: '#fff'
+    })
+    </script>
+    <!-- https://github.com/vfeskov/vanilla-back-to-top -->
+
+  </footer>
+  </body>
+</html>
