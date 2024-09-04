@@ -18,8 +18,8 @@ disableKinds = ["GitInfo"]
     url = "/cv/"
     weight = 2
 [[menu.main]]
-    name = "Gallery"
-    url = "/photo/"
+    name = "Misc"
+    url = "/misc/"
     weight = 3
 
 [markup.goldmark.renderer]

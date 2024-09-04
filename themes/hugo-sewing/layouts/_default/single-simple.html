@@ -1,10 +1,7 @@
 {{ partial "header.html" . }}
     <div class="title">{{ .Title }}</div>
+    {{ if .Site.Params.toc | default false }}
+        {{ partial "toc" . }}
+    {{ end }}
     {{ .Content }}
-    {{ if .Params.memos }}
-        <div class="memo">{{ partial "memo.html" . }}</div>
-    {{ end }}
-    {{ if .Params.comment }}
-        {{ partial "comment.html" . }}
-    {{ end }}
 {{ partial "footer.html" . }}
