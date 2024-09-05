@@ -37,7 +37,6 @@ lastmod = ["lastmod", ":git", "date", "publishDate"]
     enableMemo = false   # whether to display memos
     enableGiscus = true   # whether to display comment in blog and contact
     enableimgloop = true
-    toc = true   # whether to display table of contents in blog
 
     [permalinks]
         blog = "/blog/:year/:month/:slug/"

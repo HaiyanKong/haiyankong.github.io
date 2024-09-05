@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
     <div class="title">{{ .Title }}</div>
-    {{ if .Site.Params.toc | default false }}
+    {{ if .Params.toc | default false }}
         {{ partial "toc" . }}
     {{ end }}
     {{ .Content }}
