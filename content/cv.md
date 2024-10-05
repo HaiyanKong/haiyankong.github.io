@@ -4,4 +4,4 @@ layout: single-simple
 toc: false
 ---
 
-{{< embed-pdf url="/info/cv_haiyankong.pdf">}}
+{{< embed-pdf url="/info/CV-HaiyanKong.pdf">}}

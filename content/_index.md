@@ -19,23 +19,22 @@ people:
         name: Email
         url: "mailto:haiyankong@hotmail.com"
         icon: "fa-solid fa-envelope fa-2xl"
-        color: "color: #0D6EFD"
+        color: "color: #031BEA"
       -
         name: GoogleScholar
         url: "https://scholar.google.com/citations?user=-BuNrlEAAAAJ&hl=en&oi=sra"
         icon: "fa-brands fa-google-scholar fa-2xl"
-        color: "color: #0D6EFD"
+        color: "color: #031BEA"
       -
         name: github
         url: "https://github.com/HaiyanKong"
         icon: "fa-brands fa-github fa-2xl"
-        color: "color: #0D6EFD"
+        color: "color: #031BEA"
       -
         name: xtwitter
         url: "https://twitter.com/haiyan_kong"
         icon: "fa-brands fa-x-twitter fa-2xl"
-        color: "color: #0D6EFD"
-
+        color: "color: #031BEA"
 
 publication:
   - 
@@ -62,10 +61,10 @@ project:
     description: "Hugo Sewing is a Hugo theme for static websites that I created. This theme powers the current website. It is a simple, clean, and flexible theme suitable for personal blogs and group websites."
     links:
       -
-        name: Demo site
+        name: Demo /
         url: "https://hugo-sewing.vercel.app/"
       -
-        name: Theme repository
+        name: Repository /
         url: "https://github.com/HaiyanKong/hugo-sewing"
       -
         name: Template

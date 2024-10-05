@@ -19,11 +19,11 @@ body {
 
 .menu a {
   color: #000000;
+  opacity: 0.6;
+  font-weight: 600;
   text-decoration: none;
   border-bottom: none;
   padding: 10px;
-  opacity: 0.6;
-  font-weight: 600;
 }
 
 .menu a:hover {
@@ -40,7 +40,7 @@ body {
 
 footer {
   margin-top: 50px;
-  opacity: 0.7;
+  /* opacity: 0.7; */
   color: #ababab;
   text-align: center;
   font-size: 14px;
@@ -83,7 +83,7 @@ hr {
 
 .markdown-body a {
   /* font-weight: 600; */
-  /* color: #000000; */
+  color: #031BEA;
   text-decoration: none;
   /* padding-bottom: 1px; */
   /* border-bottom: 1px solid; */
@@ -91,13 +91,14 @@ hr {
   -webkit-text-decoration-skip: objects;
 }
 
-.markdown-body a:hover {
-  opacity: 0.3;
-  color: #000000;
-  background: none;
+.markdown-body a:active{
+  outline-width: 0;
 }
 
-.markdown-body a:active, .markdown-body a:hover {
+.markdown-body a:hover {
+  opacity: 0.5;
+  background: none;
+  text-decoration: none;
   outline-width: 0;
 }
 
