@@ -6,9 +6,9 @@ toc: true
 
 
 
-## Activity
+## Workout
 
-This is my riding & running <a href="https://haiyankong.github.io/tracker/"  role="button" target="_blank">activity tracker</a>. 
+This is my <a href="https://haiyankong.github.io/workout/"  role="button" target="_blank">workout map page</a>. 
 
 ## Gallery
 
