@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+    <div class="title">{{ .Title }}</div>
+    {{ if .Params.toc | default false }}
+        {{ partial "toc" . }}
+    {{ end }}
+    <hr class="border-dark opacity-70"/>
+    {{ .Content }}
+{{ partial "footer.html" . }}

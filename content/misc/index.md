@@ -1,6 +1,6 @@
 ---
 title: "Misc"
-layout: single-simple
+layout: misc
 toc: true
 ---
 
