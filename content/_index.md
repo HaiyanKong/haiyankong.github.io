@@ -25,16 +25,6 @@ people:
         url: "https://scholar.google.com/citations?user=-BuNrlEAAAAJ&hl=en&oi=sra"
         icon: "fa-brands fa-google-scholar fa-2xl"
         color: "color: #031BEA"
-      -
-        name: github
-        url: "https://github.com/HaiyanKong"
-        icon: "fa-brands fa-github fa-2xl"
-        color: "color: #031BEA"
-      -
-        name: xtwitter
-        url: "https://twitter.com/haiyan_kong"
-        icon: "fa-brands fa-x-twitter fa-2xl"
-        color: "color: #031BEA"
 
 publication:
   - 

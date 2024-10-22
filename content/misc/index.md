@@ -8,7 +8,7 @@ toc: true
 
 ## Workout
 
-This is my <a href="https://haiyankong.github.io/workout/"  role="button" target="_blank">workout map page</a>. 
+This is my <a href="https://haiyankong.github.io/workout/"  role="button" target="_blank">workout map</a>. 
 
 ## Gallery
 
