@@ -8,7 +8,7 @@ toc: true
 
 ## Workout
 
-This is my <a href="https://haiyankong.github.io/workout/"  role="button" target="_blank">workout map</a>. 
+This is my  <a href="https://haiyankong.github.io/workout/"  role="button" target="_blank"><i class="fa-solid fa-person-hiking fa-2xl"></i>  <i class="fa-solid fa-person-biking fa-2xl"></i>  <i class="fa-solid fa-person-running fa-2xl"></i></a>  workout map. 
 
 ## Gallery
 

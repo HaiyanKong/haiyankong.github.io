@@ -22,13 +22,8 @@ people:
         color: "color: #031BEA"
       -
         name: GoogleScholar
-        url: "https://scholar.google.com/citations?user=-BuNrlEAAAAJ"
+        url: "https://scholar.google.com/citations?user=-BuNrlEAAAAJ&hl=en"
         icon: "fa-brands fa-google-scholar fa-2xl"
-        color: "color: #031BEA"
-      -
-        name: Bento
-        url: "https://scholar.google.com/citations?user=-BuNrlEAAAAJ"
-        icon: "fa-solid fa-link fa-2xl"
         color: "color: #031BEA"
 
 publication:
