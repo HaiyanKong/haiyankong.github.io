@@ -6,9 +6,9 @@ toc: true
 
 
 
-## Workout
+## Workout <i class="fa-solid fa-person-hiking"></i>  <i class="fa-solid fa-person-biking"></i>  <i class="fa-solid fa-person-running"></i>
 
-This is my  <a href="https://haiyankong.github.io/workout/"  role="button" target="_blank"><i class="fa-solid fa-person-hiking fa-2xl"></i>  <i class="fa-solid fa-person-biking fa-2xl"></i>  <i class="fa-solid fa-person-running fa-2xl"></i></a>  workout map. 
+This is my  <a href="https://haiyankong.github.io/workout/"  role="button" target="_blank">workout trajectory map</a>.
 
 ## Gallery
 
