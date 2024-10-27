@@ -6,6 +6,6 @@
 {{< figure 
     src="/info/profile_haiyankong.jpg"
     alt="Profile"
-    width="120px"
+    width="180px"
     caption="Welcome to my website! "
     >}}
