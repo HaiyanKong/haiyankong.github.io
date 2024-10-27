@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+{{ partial "back_link.html" .}}
+
+<!-- <header>
+    <h1>{{ $.Site.Title }}</h1>
+</header> -->
+
+{{ .Content }}
+
+{{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+
+{{ if .Site.Params.theme_config.isFooter }}
+    <hr>
+    <center>
+        Powered by <a href='https://github.com/hanwenguo/hugo-theme-nostyleplease' target='_blank'>hugo-theme-nostyleplease</a>
+    </center>
+    {{ end }}
+{{ if .Site.Params.theme_config.isVisitor }}
+    <br>
+    <center>
+        <a href="{{ .Site.Params.theme_config.visitorLink }}">
+            <img src="//rf.revolvermaps.com/h/m/a/0/ff0000/128/0/5lmongnk5ft.png" width="128" height="64" alt="Map" style="border:0;">
+        </a>
+    </center>
+    {{ end }}
+{{ end }}
+

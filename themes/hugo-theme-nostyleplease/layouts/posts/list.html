@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+<!-- divide post list by year  -->
+{{ if .Site.Params.theme_config.isListGroupByDate }}
+    {{ range .Pages.GroupByDate "2006" }}
+    <h3>{{ .Key }}</h3>
+    <ul>
+        {{ range .Pages }}
+            <li>
+                <span>{{ .Date.Format site.Params.theme_config.date_format }}</span>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+{{ else }}
+    {{ partial "post_list.html" (dict "context" . "section" .Section) }}
+{{ end }}
+
+
+
+{{ end }}

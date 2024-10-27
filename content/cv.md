@@ -1,7 +1,6 @@
 ---
 title: "CV"
-layout: single-simple
-toc: false
+layout: "newsingle"
 ---
 
 {{< embed-pdf url="/info/CV-HaiyanKong.pdf">}}

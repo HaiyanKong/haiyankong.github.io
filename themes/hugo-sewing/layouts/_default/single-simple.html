@@ -1,7 +1,0 @@
-{{ partial "header.html" . }}
-    <div class="title">{{ .Title }}</div>
-    {{ if .Params.toc | default false }}
-        {{ partial "toc" . }}
-    {{ end }}
-    {{ .Content }}
-{{ partial "footer.html" . }}
