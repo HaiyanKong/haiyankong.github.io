@@ -2,14 +2,12 @@
 {{ partial "back_link.html" .}}
 
 <article>
-    <p class="post-meta">
-        <time datetime="{{ .Date }}">
-            {{ .Date | time.Format site.Params.theme_config.date_format }}
-        </time>
-    </p>
 
-    <h1>{{ .Title }}</h1>
-
+    <center>
+        <h1>{{ .Title }}</h1>
+        <p><time datetime="{{ .Date }}">{{ .Date | time.Format site.Params.theme_config.date_format }}</time></p>
+    </center>
+    
     {{ if .Params.toc }}
         <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
             {{ .TableOfContents }}
@@ -17,6 +15,10 @@
     {{ end }}
 
     {{ .Content }}
+
+    <hr>
+    
+    <p><a href=".." class="backlink">返回目录</a></p>
 </article>
 
 {{ end }}
