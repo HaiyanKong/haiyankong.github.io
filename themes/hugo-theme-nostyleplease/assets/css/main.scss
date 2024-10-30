@@ -7,7 +7,7 @@
   a {
     color: $--link-color;
     text-decoration: none;
-    // &:visited { color: $--visited-link-color; }
+    font-weight:600;
     &:hover {opacity: 0.5; }
   }
 
@@ -52,7 +52,7 @@
 }
 
 @mixin light-appearance {
-  @include theme(#ebedee, #212121, #666666, #0B1DFB, #ffd900, #66666650);
+  @include theme(#EEEDE8, #212121, #666666, #ff3c00, #ffd900, #66666650);
 }
 
 body[a="dark"] { @include dark-appearance; }
