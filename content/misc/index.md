@@ -7,7 +7,7 @@ tocBorder: true
 
 ## Workout
 
-I have recently developed an addiction to running, and here is my {{< link "https://haiyankong.github.io/workout/" >}}trajectory map{{< /link >}}.
+I have been addicted to running recently, and here is my {{< link "https://haiyankong.github.io/workout/" >}}running map{{< /link >}}.
 
 ## Gallery
 
