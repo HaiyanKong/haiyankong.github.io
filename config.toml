@@ -43,11 +43,11 @@ theme = ["hugo-shortcode-gallery","hugo-embed-pdf-shortcode","hugo-theme-nostyle
     isVisitor = true
     visitorLink = "https://www.revolvermaps.com/livestats/5lmongnk5ft/"
 
-    back_home_text = "Home"
-    text1 = "CV"
-    link1 = "/cv/"
-    text2 = "Misc"
-    link2 = "/misc/"
+    back_home_text = "Back to Home"
+    text1 = ""
+    link1 = "//"
+    text2 = ""
+    link2 = "//"
     #text3 = ""
     #link3 = "//"
     #text4 = ""
