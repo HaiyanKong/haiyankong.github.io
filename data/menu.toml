@@ -18,7 +18,7 @@
 #entries = [{ title = "to edit these menus, edit data/menu.toml file" }]
 
 [[entries]]
-title = "About me</a>"
+title = "About me&nbsp;&nbsp;<a href='/cv/' target='_blank'>[CV]</a>"
 
 [[entries.entries]]
 title = "I am currently a research assistant at the <a href='http://english.psych.cas.cn/' target='_blank'>Institute of Psychology, Chinese Academy Sciences</a>. Before that, I graduated with the Master of Philosophy degree in Psychology from <a href='https://en.njnu.edu.cn/' target='_blank'>Nanjing Normal University</a> of China in 2023."
