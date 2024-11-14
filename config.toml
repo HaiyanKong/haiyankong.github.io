@@ -40,7 +40,6 @@ theme = ["hugo-shortcode-gallery","hugo-embed-pdf-shortcode","hugo-theme-nostyle
     date_format = "2006-01-02"
     isListGroupByDate = true
     isFooter = true
-    isVisitor = true
     visitorLink = "https://www.revolvermaps.com/livestats/5lmongnk5ft/"
 
     back_home_text = "Back to Home"
