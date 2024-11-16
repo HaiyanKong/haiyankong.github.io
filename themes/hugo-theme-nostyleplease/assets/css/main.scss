@@ -52,8 +52,25 @@
 }
 
 @mixin light-appearance {
-  @include theme(#EEEDE8, #212121, #666666, #ff3c00, #ffd900, #66666650);
+  @include theme(#fcfcfc, #212121, #666666, #0f3ec9, #ffd900, #66666650);
 }
+
+// @mixin light-appearance {
+//   @include theme(#b6d4c7, #212121, #666666, #012696, #ffd900, #66666650);
+// }
+
+// @mixin light-appearance {
+//   @include theme(#F4EAC5, #212121, #666666, #0b6553, #ffd900, #66666650);
+// }
+
+// @mixin light-appearance {
+//   @include theme(#E4C6D0, #212121, #666666, #425066, #ffd900, #66666650);
+// }
+
+// @mixin light-appearance {
+//   @include theme(#EEEDE8, #212121, #666666, #ff3c00, #ffd900, #66666650);
+// }
+
 
 body[a="dark"] { @include dark-appearance; }
 body[a="light"] { @include light-appearance; }

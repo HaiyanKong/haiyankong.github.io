@@ -18,7 +18,7 @@
 #entries = [{ title = "to edit these menus, edit data/menu.toml file" }]
 
 [[entries]]
-title = "About me&nbsp;&nbsp;<a href='/cv/' target='_blank'>[CV]</a>"
+title = "About me&nbsp;&nbsp;<a href='/cv/'>[CV]</a>"
 
 [[entries.entries]]
 title = "I am currently a research assistant at the <a href='http://english.psych.cas.cn/' target='_blank'>Institute of Psychology, Chinese Academy Sciences</a>. Before that, I graduated with the Master of Philosophy degree in Psychology from <a href='https://en.njnu.edu.cn/' target='_blank'>Nanjing Normal University</a> of China in 2023."
@@ -46,5 +46,5 @@ title = "Misc"
 [[entries.entries]]
 title = "In my free time, I like running. Here is my <a href='https://haiyankong.github.io/workout/' target='_blank'>running map</a>"
 [[entries.entries]]
-title = "<a href='/gallery/#sunflowers-i-planted-in-2023-spring' target='_blank'>Sunflowers I planted in 2023 Spring</a>"
+title = "<a href='/gallery/#sunflowers-i-planted-in-2023-spring'>Sunflowers I planted in 2023 Spring</a>"
 
