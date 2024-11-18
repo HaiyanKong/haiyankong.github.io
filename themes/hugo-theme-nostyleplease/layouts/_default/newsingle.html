@@ -1,4 +1,5 @@
 {{ define "main" }}
+
 {{ partial "back_link.html" .}}
 
 <h1>{{ .Title }}</h1>
@@ -14,4 +15,7 @@
     {{ .Content }}
     
 </article>
+
+<p><a href=".." class="backlink">Back to Home</a></p>
+
 {{ end }}
