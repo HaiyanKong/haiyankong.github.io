@@ -2,7 +2,7 @@ baseURL = '/'
 languageCode = 'en-us'
 DefaultContentLanguage = "en"
 title = "Haiyan Kong"
-theme = ["hugo-shortcode-gallery","hugo-embed-pdf-shortcode","hugo-theme-nostyleplease"]
+theme = ["hugo-theme-nostyleplease"]
 
 [module]
   [module.hugoVersion]
@@ -40,7 +40,6 @@ theme = ["hugo-shortcode-gallery","hugo-embed-pdf-shortcode","hugo-theme-nostyle
     date_format = "2006-01-02"
     isListGroupByDate = true
     isFooter = true
-    visitorLink = "https://www.revolvermaps.com/livestats/5lmongnk5ft/"
 
     back_home_text = "Back to Home"
     text1 = ""
