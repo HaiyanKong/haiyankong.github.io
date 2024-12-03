@@ -15,5 +15,14 @@
         {{- if $item.post_list -}}
             {{ partial "post_list.html" (dict "context" . "section" $item.post_list.section "limit" $item.post_list.limit "show_more" $item.post_list.show_more "show_more_text" $item.post_list.show_more_text "show_more_url" $item.post_list.show_more_url) -}}
         {{- end -}}
+
+        {{- if $item.note_list -}}
+            {{ partial "note_list.html" (dict "context" . "section" $item.note_list.section "limit" $item.note_list.limit "show_more" $item.note_list.show_more "show_more_text" $item.note_list.show_more_text "show_more_url" $item.note_list.show_more_url) -}}
+        {{- end -}}
+
+        {{- if $item.wiki_list -}}
+            {{ partial "wiki_list.html" (dict "context" . "section" $item.wiki_list.section "limit" $item.wiki_list.limit "show_more" $item.wiki_list.show_more "show_more_text" $item.wiki_list.show_more_text "show_more_url" $item.wiki_list.show_more_url) -}}
+        {{- end -}}
+
     {{- end -}}
 </ul>
