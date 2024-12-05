@@ -20,7 +20,7 @@
 [[entries]]
 title = "About me"
     [[entries.entries]]
-    title = "I am currently a research assistant at the <a href='http://english.psych.cas.cn/' target='_blank'>Institute of Psychology, Chinese Academy Sciences</a>. Before that, I graduated with the Master of Philosophy degree in Psychology from <a href='https://en.njnu.edu.cn/' target='_blank'>Nanjing Normal University</a> of China in 2023."
+    title = "I am currently a research assistant at the Institute of Psychology, Chinese Academy Sciences. Before that, I graduated with the Master of Science in Psychology from Nanjing Normal University in China in 2023."
     [[entries.entries]]
     title = "How to pronounce my name: <a href='https://namedrop.io/haiyankong' target='_blank'>Haiyan Kong</a>"
     [[entries.entries]]
@@ -36,6 +36,6 @@ title = "Publication / Manuscript&nbsp;&nbsp;<a href='https://scholar.google.com
 [[entries]]
 title = "Misc"
     [[entries.entries]]
-    title = "In my free time, I like running. Here is my <a href='https://haiyankong.github.io/workout/' target='_blank'>running map</a>"
+    title = "In my free time, I like running. Here is my <a href='https://haiyankong.github.io/workout/' target='_blank'>running map</a>."
     [[entries.entries]]
     title = "<b>Hugo Sewing</b>: Hugo Sewing is a Hugo theme for static websites that I created. It is a simple and flexible theme suitable for personal blog and group website.&nbsp;<a href='https://hugo-sewing.vercel.app/' target='_blank'>[Demo]</a>&nbsp;<a href='https://github.com/HaiyanKong/hugo-sewing' target='_blank'>[Repository]</a>&nbsp;<a href='https://github.com/HaiyanKong/hugo-sewing-template' target='_blank'>[Template]</a>"
