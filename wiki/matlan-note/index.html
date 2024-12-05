@@ -1,0 +1,739 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content='20211107 %% MATLAB 学习笔记 20211107 % MATLAB 简介 % 特点 % 区分大小写 % 优先列的语言——数据提取 % 注意事项 % set path——default（e.g., SPM 和 EEGlab 会冲突); % 当前路径——数据所在的路径 % 格式 % *.m “代码文件”; % *.mat/.txt "数据文件" %% 常用命令(该行命令结果不在命令窗口中显示) clear % 清除工作空间中的所有变量 clear x % 清除工作空间中的变量x clc % 清屏 help % 帮助 pwd % 当前工作路径 who % 查看工作空间中的变量 whos % 查看工作空间中变量的详细信息 %% 数学运算 1+1; 2-1; 2*1; 1/2; % 四则运算 2^3; % n次幂 x=16; sqrt(x); x^(1/2); % x 的平方根 exp(x) % 自然对数e的x次幂 log(x) % 以自然对数e为底的对数函数 log10(x) % 以10为底的对数函数 abs(x) % 求x的绝对值 mod(x,n) % x除以n的余数 mod(9,2)=1 round(x) % 对x四舍五入 round(1.'><title>MATLAB 笔记
+</title><link rel="shortcut icon" type=image/x-icon href=/><link rel=stylesheet href=/css/main.254a9703396d6145e97662c5d4ee1ba7cf3a1c9629cd58f55fcbd185be0f369ad865a8649fc33a4084d76e46975ba9b1aceab3fc9f929665a0f6c58a5958e27e.css integrity="sha512-JUqXAzltYUXpdmLF1O4bp886HJYpzVj1X8vRhb4PNprYZahkn8M6QITXbkaXW6mxrOqz/J+SlmWg9sWKWVjifg=="></head><body a=light><main class=page-content aria-label=Content><div class=w><article><center><h1>MATLAB 笔记</h1></center><aside class=toc><nav id=TableOfContents><ul><li><a href=#20211107>20211107</a></li><li><a href=#20220625>20220625</a></li><li><a href=#20220622>20220622</a></li><li><a href=#matlab_exercise_20220622>matlab_exercise_20220622</a></li><li><a href=#timeselect>timeSelect</a></li><li><a href=#findnan>findNaN</a></li><li><a href=#randomdata>randomData</a></li></ul></nav></aside><h2 id=20211107>20211107</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span><span style=color:#0f0>%%  MATLAB 学习笔记 20211107</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% MATLAB 简介</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 特点</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% 区分大小写</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% 优先列的语言——数据提取</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 注意事项</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% set path——default（e.g., SPM 和 EEGlab 会冲突);</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% 当前路径——数据所在的路径</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 格式</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% *.m “代码文件”;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% *.mat/.txt &#34;数据文件&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%  常用命令(该行命令结果不在命令窗口中显示)</span>
+</span></span><span style=display:flex><span>clear                                              <span style=color:#0f0>% 清除工作空间中的所有变量</span>
+</span></span><span style=display:flex><span>clear x                                              <span style=color:#0f0>% 清除工作空间中的变量x</span>
+</span></span><span style=display:flex><span>clc                                                                  <span style=color:#0f0>% 清屏</span>
+</span></span><span style=display:flex><span>help                                                                 <span style=color:#0f0>% 帮助</span>
+</span></span><span style=display:flex><span>pwd                                                           <span style=color:#0f0>% 当前工作路径</span>
+</span></span><span style=display:flex><span>who                                                   <span style=color:#0f0>% 查看工作空间中的变量</span>
+</span></span><span style=display:flex><span>whos                                           <span style=color:#0f0>% 查看工作空间中变量的详细信息</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%  数学运算</span>
+</span></span><span style=display:flex><span><span style=color:#f60>1</span>+<span style=color:#f60>1</span>; <span style=color:#f60>2</span>-<span style=color:#f60>1</span>; <span style=color:#f60>2</span>*<span style=color:#f60>1</span>; <span style=color:#f60>1</span>/<span style=color:#f60>2</span>;                                               <span style=color:#0f0>% 四则运算</span>
+</span></span><span style=display:flex><span><span style=color:#f60>2</span>^<span style=color:#f60>3</span>;                                                                 <span style=color:#0f0>% n次幂</span>
+</span></span><span style=display:flex><span>x=<span style=color:#f60>16</span>; sqrt(x); x^(<span style=color:#f60>1</span>/<span style=color:#f60>2</span>);                                         <span style=color:#0f0>% x 的平方根</span>
+</span></span><span style=display:flex><span>exp(x)                                                    <span style=color:#0f0>% 自然对数e的x次幂</span>
+</span></span><span style=display:flex><span>log(x)                                            <span style=color:#0f0>% 以自然对数e为底的对数函数</span>
+</span></span><span style=display:flex><span>log10(x)                                                <span style=color:#0f0>% 以10为底的对数函数</span>
+</span></span><span style=display:flex><span>abs(x)                                                         <span style=color:#0f0>% 求x的绝对值</span>
+</span></span><span style=display:flex><span>mod(x,n)                                           <span style=color:#0f0>% x除以n的余数 mod(9,2)=1</span>
+</span></span><span style=display:flex><span>round(x)                                          <span style=color:#0f0>% 对x四舍五入 round(1.6)=2</span>
+</span></span><span style=display:flex><span>fix(x)                                <span style=color:#0f0>% 去掉x的小数部分，即向0取整 fix(1.6)=1</span>
+</span></span><span style=display:flex><span>ceil(x)                                     <span style=color:#0f0>% 向正无穷取最小整数 ceil(1.6)=2</span>
+</span></span><span style=display:flex><span>floor(x)                                   <span style=color:#0f0>% 向负无穷取最大整数 floor(1.6)=1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>pi                                                                <span style=color:#0f0>% 圆周率π</span>
+</span></span><span style=display:flex><span>sin(x)                          <span style=color:#0f0>% 正弦，sin(x)的参数为弧度，sind(x)参数为角度</span>
+</span></span><span style=display:flex><span>sind(x)                                             <span style=color:#0f0>% sin(x)=sind(x/pi*180)</span>
+</span></span><span style=display:flex><span>asin(x)
+</span></span><span style=display:flex><span>asind(x)                                    <span style=color:#0f0>% 反正弦，即已知正弦值求弧度/角度</span>
+</span></span><span style=display:flex><span>cos(x)                                                               <span style=color:#0f0>% 余弦</span>
+</span></span><span style=display:flex><span>acos(x)                                                             <span style=color:#0f0>% 反余弦</span>
+</span></span><span style=display:flex><span>tan(x)                                              <span style=color:#0f0>% 正切，即sinx(x)/cos(x)</span>
+</span></span><span style=display:flex><span>atan(x)                                                            <span style=color:#0f0>% 反正切</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 基本数据结构</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 数字</span>
+</span></span><span style=display:flex><span>    <span style=color:#f60>6</span>;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 字符串 &#39; &#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#87ceeb>&#39;hello&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 数组  [ ]</span>
+</span></span><span style=display:flex><span>    [<span style=color:#f60>1</span> <span style=color:#f60>2</span> <span style=color:#f60>3</span> <span style=color:#f60>4</span>]; <span style=color:#0f0>% 一维数组</span>
+</span></span><span style=display:flex><span>    [<span style=color:#f60>12</span> <span style=color:#f60>13</span> <span style=color:#f60>14</span> <span style=color:#f60>15</span>;<span style=color:#f60>16</span> <span style=color:#f60>17</span> <span style=color:#f60>18</span> <span style=color:#f60>19</span>]; <span style=color:#0f0>% 二维数组</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% 三维数组</span>
+</span></span><span style=display:flex><span>    [<span style=color:#f60>10</span>:<span style=color:#f60>20</span>:<span style=color:#f60>110</span>] <span style=color:#0f0>% 使用步长的方式定义数组,步长定义的数组可以不加[]</span>
+</span></span><span style=display:flex><span>    a=[x1:n:x2];	<span style=color:#0f0>% 以x1开始，n为步长，到x2为止的数列</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% 例：a=[2:3:8]; 得到a=[2 5 8]; a=[7:-2:-1]; 得到a=[7 5 3 1 -1];</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% 若结束值不等于起始值加n步长，则结束值为起始值加(n-1)步长</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% 例：a=[1:2:6]; 得到a=[1 3 5];</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 胞元 { }</span>
+</span></span><span style=display:flex><span>    {<span style=color:#87ceeb>&#39;zhang&#39;</span>,<span style=color:#f60>3</span>,<span style=color:#87ceeb>&#39;wang&#39;</span>};
+</span></span><span style=display:flex><span> <span style=color:#0f0>% 结构体</span>
+</span></span><span style=display:flex><span>    NIRS.fs = <span style=color:#f60>2.44</span>;
+</span></span><span style=display:flex><span>    NIRS.wavelength = [<span style=color:#f60>760</span>, <span style=color:#f60>830</span>];
+</span></span><span style=display:flex><span>    NIRS.oxydata = [<span style=color:#f60>65</span>,<span style=color:#f60>70</span>,<span style=color:#f60>89</span>,<span style=color:#f60>99</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%  特殊数组</span>
+</span></span><span style=display:flex><span>ones(<span style=color:#f60>4</span>,<span style=color:#f60>5</span>)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 生成 4*5 的矩阵数组，矩阵各元素均为 1</span>
+</span></span><span style=display:flex><span>zeros(<span style=color:#f60>4</span>,<span style=color:#f60>5</span>)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 生成 4*5 的矩阵数组，矩阵各元素均为 0</span>
+</span></span><span style=display:flex><span>eye(<span style=color:#f60>4</span>,<span style=color:#f60>5</span>)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 生成 4*5 的矩阵数组，其中对角线元素为 1，其余元素为 0</span>
+</span></span><span style=display:flex><span>magic(<span style=color:#f60>5</span>)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 生成 5*5 的矩阵数组，由1到5^2组成，且各行、各列、对角线的和均相同</span>
+</span></span><span style=display:flex><span>repmat(x,m,n)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 把矩阵数组x复制m行n列；</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如x=[1 2; 3 4]; repmat(x,2,3)=[1 2 1 2; 3 4 3 4; 1 2 1 2; 3 4 3 4];</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%  矩阵/向量运算</span>
+</span></span><span style=display:flex><span>a(n); <span style=color:#0f0>% 取出矩阵数组a中第n个元素</span>
+</span></span><span style=display:flex><span>a(<span style=color:red>end</span>); <span style=color:#0f0>% 取出矩阵a中最后一个元素</span>
+</span></span><span style=display:flex><span>a(<span style=color:red>end</span>-<span style=color:#f60>1</span>) <span style=color:#0f0>% 取出矩阵a中倒数第二个元素</span>
+</span></span><span style=display:flex><span>a(m,n) <span style=color:#0f0>% 取出矩阵a中第m行第n列的元素</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如a=[1 3 7; 2 9 5; 4 8 6],则a([1 2],[2 3])=[3 7; 9 5];</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 即取第1、2行的第2、3列的元素</span>
+</span></span><span style=display:flex><span>a(m,:); <span style=color:#0f0>% 取出矩阵第m行所有元素</span>
+</span></span><span style=display:flex><span>a(:,n); <span style=color:#0f0>% 取出矩阵第n列所有元素</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>a(m,n)=x;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 将矩阵a中第m行第n列的元素赋值x；</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 若m/n超出矩阵行/列，则补充其余值为0</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如a=[1 3 7; 2 9 5; 4 8 6]; a(1,2)=2; 得到a=[1 2 7; 2 9 5; 4 8 6];</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 特别地，对于向量a，若a(n)=[]，则删除第n个元素</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如a=[1:2:5]; a(2)=[]; a=[1 5];</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>a&#39;;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 将矩阵a转置</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>a(:);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 将矩阵a的元素按列堆叠，产生一个新的列向量。</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如a=[1 3 7; 2 9 5; 4 8 6];则a(:)=[1 2 4 3 9 8 7 5 6]’;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>reshape(a,m,n)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 将矩阵a按列重排后，转换成m行n列的新矩阵</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如 a=[1 2 3 4; 5 6 7 8];</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 则 reshape(a,4,2)=[1 3; 5 7; 2 4; 6 8];</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[m,n]=size(a);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 返回矩阵的行数m和列数n</span>
+</span></span><span style=display:flex><span>length(a);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 返回矩阵或向量的行列数中较大值</span>
+</span></span><span style=display:flex><span>max(a);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 返回矩阵a中每一列的最大值</span>
+</span></span><span style=display:flex><span>min(a)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 返回矩阵a中每一列的最小值</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>a=[<span style=color:#f60>1</span> <span style=color:#f60>2</span> <span style=color:#f60>2</span> <span style=color:#f60>3</span>];
+</span></span><span style=display:flex><span>b=[<span style=color:#f60>2</span> <span style=color:#f60>3</span> <span style=color:#f60>4</span> <span style=color:#f60>5</span>];
+</span></span><span style=display:flex><span>c=[<span style=color:#f60>1</span> <span style=color:#f60>2</span>;<span style=color:#f60>0</span> <span style=color:#f60>3</span>];
+</span></span><span style=display:flex><span>isequal(a,b)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 判断向量或矩阵a和b是否相同；相同，值为1；不同，值为0.</span>
+</span></span><span style=display:flex><span>find(c);
+</span></span><span style=display:flex><span><span style=color:#0f0>%找到矩阵a中所有不为零的数，返回其位置</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 数据的提取</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 数组[]形成，()提取</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>a1 = [<span style=color:#f60>1</span> <span style=color:#f60>3</span> <span style=color:#f60>5</span> <span style=color:#f60>7</span> <span style=color:#f60>9</span> <span style=color:#f60>11</span> <span style=color:#f60>13</span>];
+</span></span><span style=display:flex><span><span style=color:#0f0>% 一维数组</span>
+</span></span><span style=display:flex><span>a1(n);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从a1数组中提取第n个位置的数据</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从a1数组中同时提取多个位置的数据</span>
+</span></span><span style=display:flex><span>a1([m,n]);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从a1数组中提取第m个位置的数据和第n个位置的数据</span>
+</span></span><span style=display:flex><span>a1(m:n);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从a1数组中提取第m个位置到第n个位置的数据</span>
+</span></span><span style=display:flex><span>a1(m:<span style=color:red>end</span>);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从a1数组中提取第m个位置到最后一个位置的数据</span>
+</span></span><span style=display:flex><span>a1(m:<span style=color:red>end</span>-<span style=color:#f60>1</span>);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从a1数组中提取第m个位置到倒数第二个位置的数据</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 步长的方式不支持该方法，提取时支持该方法</span>
+</span></span><span style=display:flex><span>a1(:);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 数组a1中的数据全部提取出来</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% matlab是一种优先列的语言，因此提取的时候列优先</span>
+</span></span><span style=display:flex><span>a1(:)&#39;;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 若要转换为行，则使用&#39;转置</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>school1 = [<span style=color:#f60>91</span> <span style=color:#f60>92</span> <span style=color:#f60>93</span> <span style=color:#f60>94</span>; <span style=color:#f60>95</span> <span style=color:#f60>96</span> <span style=color:#f60>97</span> <span style=color:#f60>98</span>; <span style=color:#f60>99</span> <span style=color:#f60>90</span> <span style=color:#f60>91</span> <span style=color:#f60>92</span>];
+</span></span><span style=display:flex><span><span style=color:#0f0>% 二维数组</span>
+</span></span><span style=display:flex><span>school1(n,m);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从数组school1中提取第n行第m列的数据</span>
+</span></span><span style=display:flex><span>school1(n,[m,l]);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从数组school1中提取第n行第m列和第l列的数据</span>
+</span></span><span style=display:flex><span>school1(:,<span style=color:#f60>3</span>)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从数组school1中提取第3列的数据</span>
+</span></span><span style=display:flex><span>school1(<span style=color:#f60>2</span>,:)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从数组school1中提取第二行的数据</span>
+</span></span><span style=display:flex><span>school1(<span style=color:#f60>2</span>:<span style=color:red>end</span>,<span style=color:#f60>2</span>:<span style=color:red>end</span>);
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从数组school1中提取第二到最后一行、从第二到最后一列的数据</span>
+</span></span><span style=display:flex><span>score(<span style=color:#f60>2</span>,[<span style=color:#f60>2</span>:<span style=color:#f60>3</span>],[<span style=color:#f60>2</span>:<span style=color:#f60>4</span>])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 胞元用{}生成，用{}提取</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 结构体的提取</span>
+</span></span><span style=display:flex><span>subj(<span style=color:#f60>2</span>,<span style=color:#f60>2</span>).name
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 数据的修改</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 修改对应于提取</span>
+</span></span><span style=display:flex><span>a2 = [<span style=color:#f60>1</span> <span style=color:#f60>2</span> <span style=color:#f60>3</span> <span style=color:#f60>4</span>;<span style=color:#f60>5</span> <span style=color:#f60>6</span> <span style=color:#f60>7</span> <span style=color:#f60>8</span>];
+</span></span><span style=display:flex><span>a2([<span style=color:#f60>4</span>,<span style=color:#f60>5</span>]) = [<span style=color:#f60>666</span> <span style=color:#f60>333</span>];<span style=color:#0f0>% 不要忘记matlab列优先</span>
+</span></span><span style=display:flex><span>school3 = [<span style=color:#f60>1</span> <span style=color:#f60>5</span> <span style=color:#f60>9</span> <span style=color:#f60>13</span>;<span style=color:#f60>2</span> <span style=color:#f60>6</span> <span style=color:#f60>10</span> <span style=color:#f60>14</span>;<span style=color:#f60>3</span> <span style=color:#f60>7</span> <span style=color:#f60>11</span> <span style=color:#f60>15</span>;<span style=color:#f60>4</span> <span style=color:#f60>8</span> <span style=color:#f60>12</span> <span style=color:#f60>16</span>];
+</span></span><span style=display:flex><span>school3([<span style=color:#f60>2</span>,<span style=color:#f60>3</span>],[<span style=color:#f60>2</span>,<span style=color:#f60>4</span>]) = [<span style=color:#f60>66</span>,<span style=color:#f60>144</span>; <span style=color:#f60>77</span>,<span style=color:#f60>155</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%  随机与排序</span>
+</span></span><span style=display:flex><span>rand(m,n)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 生成m行n列在0到1间均匀分布的随机数</span>
+</span></span><span style=display:flex><span>randn(m,n)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 生成m行n列以0为均值，1为方差的随机数</span>
+</span></span><span style=display:flex><span>randi(x,m,n)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 生成m行n列的矩阵，其中元素为1到x之间的随机整数</span>
+</span></span><span style=display:flex><span>randperm(n)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 生成1至n随机排列的行向量</span>
+</span></span><span style=display:flex><span>shuffle(x)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 将行向量x的各元素随机排列</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 注：某些版本的shuffle命令可以支持对矩阵按行或列进行随机排列</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 详情可以help shuffle查看</span>
+</span></span><span style=display:flex><span>sort(x)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 对于向量x，将x中的元素按升序排列</span>
+</span></span><span style=display:flex><span>sort(x,DIM,mode)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 对于矩阵x，将x中的元素按指定维度按指定顺序排列，</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 其中DIM=1为按列排序，DIM=2为按行排序；</span>
+</span></span><span style=display:flex><span>mode=<span style=color:#87ceeb>&#39;ascend&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 升序</span>
+</span></span><span style=display:flex><span>mode=<span style=color:#87ceeb>&#39;descend&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 降序</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如对于x=[3 7 5; 0 4 2];</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 则sort(x,1,&#39;ascend&#39;)=[0 4 2; 3 7 5];</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% sort(x,2,&#39;descend&#39;)=[7 5 3; 4 2 0];</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 统计运算</span>
+</span></span><span style=display:flex><span>mean(x,DIM)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 计算矩阵x每列（DIM=1）或每行（DIM=2）的平均值，</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如对于x=[3 7 5; 0 4 2; 2 9 7];</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 则mean(x,1)=[1.667 6.667 4.667]，mean(x,2)=[5; 2; 6]；</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如需计算某些元素的均值，可首先取出该元素，然后将其按列堆叠，再求均值，</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 如z=x(:,2:3); mean(z(:))，则可求矩阵x中第二列和第三列元素的均值</span>
+</span></span><span style=display:flex><span>median(x)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 计算矩阵x每一列的中位数</span>
+</span></span><span style=display:flex><span>sum(x)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 计算矩阵x每一列的和</span>
+</span></span><span style=display:flex><span>std(x)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 计算行向量x的方差，若x为矩阵，计算每列的方差</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%  逻辑判断</span>
+</span></span><span style=display:flex><span>a==b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 判断a的值是否与b相等，如果a为矩阵，b为常数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 则a中各个元素与b进行比较；</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 若a、b均为矩阵，则a、b行列数必须相等，分别判断相对应的元素是否相等</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 相等返回1（true），不等返回0（false）</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 注意，逻辑判断为双等号，区别于赋值单等号</span>
+</span></span><span style=display:flex><span>a&gt;b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 判断a的值是否大于b</span>
+</span></span><span style=display:flex><span>a&gt;=b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 判断a的值是否不小于b</span>
+</span></span><span style=display:flex><span>a&lt;b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 判断a的值是否小于b</span>
+</span></span><span style=display:flex><span>a&lt;=b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 判断a的值是否不大于b</span>
+</span></span><span style=display:flex><span>a~=b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 判断a的值是否与b不等</span>
+</span></span><span style=display:flex><span>&amp;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 逻辑与</span>
+</span></span><span style=display:flex><span>|
+</span></span><span style=display:flex><span><span style=color:#0f0>% 逻辑或</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 比较</span>
+</span></span><span style=display:flex><span>a=[<span style=color:#f60>0</span> <span style=color:#f60>0</span> <span style=color:#f60>2</span> <span style=color:#f60>1</span>];
+</span></span><span style=display:flex><span>b=[<span style=color:#f60>3</span> <span style=color:#f60>0</span> <span style=color:#f60>2</span> <span style=color:#f60>0</span>];
+</span></span><span style=display:flex><span>a==b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 返回[0 1 1 0] (逐个元素比较是否相等)</span>
+</span></span><span style=display:flex><span>a~=b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 返回[1 0 0 1] (逐个元素比较是否不等)</span>
+</span></span><span style=display:flex><span>a&amp;b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 返回[0 0 1 0] (各非零元素均看作1，只有同时为真a&amp;b才为真）</span>
+</span></span><span style=display:flex><span>a|b;
+</span></span><span style=display:flex><span><span style=color:#0f0>% 返回[1 0 1 1] (各非零元素均看作1，有一为真a|b即为真）</span>
+</span></span></code></pre></div><h2 id=20220625>20220625</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span><span style=color:#0f0>%%  20220625</span>
+</span></span><span style=display:flex><span>clear;clc;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>a = <span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>b = <span style=color:#87ceeb>&#39;1&#39;</span>
+</span></span><span style=display:flex><span>c = <span style=color:#87ceeb>&#39;A&#39;</span>
+</span></span><span style=display:flex><span>class(a)
+</span></span><span style=display:flex><span>b_1 = class(b)
+</span></span><span style=display:flex><span>c_1 = class(c)
+</span></span><span style=display:flex><span>d = [<span style=color:#f60>1</span> <span style=color:#f60>3</span>]
+</span></span><span style=display:flex><span>e = [<span style=color:#f60>1</span>,<span style=color:#f60>3</span>,<span style=color:#f60>5</span>,<span style=color:#f60>8</span>,<span style=color:#f60>9</span>,<span style=color:#f60>10</span>]
+</span></span><span style=display:flex><span>f = [<span style=color:#f60>3</span>;<span style=color:#f60>5</span>]
+</span></span><span style=display:flex><span>g = [<span style=color:#f60>1</span>,<span style=color:#f60>3</span>,<span style=color:#f60>5</span>,<span style=color:#f60>8</span>,<span style=color:#f60>9</span>,<span style=color:#f60>10</span>;<span style=color:#f60>1</span>,<span style=color:#f60>2</span>,<span style=color:#f60>3</span>,<span style=color:#f60>4</span>,<span style=color:#f60>5</span>,<span style=color:#f60>6</span>]
+</span></span><span style=display:flex><span>h = f&#39;
+</span></span><span style=display:flex><span>i = <span style=color:#f60>1</span>:<span style=color:#f60>1</span>:<span style=color:#f60>100</span>
+</span></span><span style=display:flex><span>j = <span style=color:#f60>100</span>:-<span style=color:#f60>1</span>:<span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>k = length(e)                                           <span style=color:#0f0>% 查看一维向量的元素</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>l = [<span style=color:#f60>2</span>,<span style=color:#f60>6</span>,<span style=color:#f60>1</span>,<span style=color:#f60>9</span>,<span style=color:#f60>4</span>,<span style=color:#f60>8</span>,<span style=color:#f60>3</span>]
+</span></span><span style=display:flex><span>l_1 = class(l)                                                   <span style=color:#0f0>% 查看类型</span>
+</span></span><span style=display:flex><span>l_2 = length(l)                                              <span style=color:#0f0>% 查看元素个数</span>
+</span></span><span style=display:flex><span>l(<span style=color:#f60>4</span>) = <span style=color:#f60>19</span>
+</span></span><span style=display:flex><span>l([<span style=color:#f60>2</span>,<span style=color:#f60>5</span>]) = [<span style=color:#f60>16</span>,<span style=color:#f60>14</span>]                                        <span style=color:#0f0>% 提取更改多个原始</span>
+</span></span><span style=display:flex><span>m = l(<span style=color:red>end</span>)
+</span></span><span style=display:flex><span>l([<span style=color:red>end</span>-<span style=color:#f60>3</span>:<span style=color:red>end</span>]) = [<span style=color:#f60>1</span>,<span style=color:#f60>2</span>,<span style=color:#f60>3</span>,<span style=color:#f60>4</span>]                                <span style=color:#0f0>% 提取更改后四个数</span>
+</span></span><span style=display:flex><span>l(<span style=color:red>end</span>-<span style=color:#f60>3</span>:<span style=color:red>end</span>) = [<span style=color:#f60>1</span>,<span style=color:#f60>2</span>,<span style=color:#f60>3</span>,<span style=color:#f60>4</span>]                                  <span style=color:#0f0>% 提取更改后四个数</span>
+</span></span><span style=display:flex><span>l(<span style=color:#f60>3</span>) = []                                                   <span style=color:#0f0>% 删除某一个元素</span>
+</span></span><span style=display:flex><span>n = [<span style=color:#f60>1</span>,<span style=color:#f60>2</span>]
+</span></span><span style=display:flex><span>n(<span style=color:#f60>3</span>) = l(<span style=color:#f60>1</span>)
+</span></span><span style=display:flex><span>n(<span style=color:#f60>4</span>:<span style=color:#f60>7</span>) = l(<span style=color:#f60>1</span>:<span style=color:#f60>4</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear;clc;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>o = [<span style=color:#f60>1</span>:<span style=color:#f60>3</span>]
+</span></span><span style=display:flex><span>p = [<span style=color:#f60>4</span>:<span style=color:#f60>6</span>]
+</span></span><span style=display:flex><span>q = [o;p]
+</span></span><span style=display:flex><span>r = q&#39;
+</span></span><span style=display:flex><span>s(<span style=color:#f60>4</span>,<span style=color:#f60>5</span>) = <span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>t = rand (<span style=color:#f60>4</span>,<span style=color:#f60>5</span>)
+</span></span><span style=display:flex><span>u = t(<span style=color:#f60>2</span>,<span style=color:#f60>2</span>:<span style=color:#f60>4</span>)
+</span></span><span style=display:flex><span>v = t(:,<span style=color:#f60>2</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear;clc;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>x = size(t)
+</span></span><span style=display:flex><span>x_1 = size(t,<span style=color:#f60>1</span>)
+</span></span><span style=display:flex><span>x_2 = size(t,<span style=color:#f60>2</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear;clc;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>y = [<span style=color:#87ceeb>&#39;hello&#39;</span>,<span style=color:#87ceeb>&#39;world&#39;</span>]
+</span></span><span style=display:flex><span>z = [<span style=color:#87ceeb>&#39;hello&#39;</span>;<span style=color:#87ceeb>&#39;world&#39;</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear;clc;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>A{<span style=color:#f60>1</span>,<span style=color:#f60>1</span>} = <span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>A{<span style=color:#f60>1</span>,<span style=color:#f60>2</span>} = <span style=color:#f60>1</span>:<span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>A{<span style=color:#f60>2</span>,<span style=color:#f60>1</span>} = <span style=color:#87ceeb>&#39;sub001.mat&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%A{2,2} = []</span>
+</span></span><span style=display:flex><span>A{<span style=color:#f60>1</span>,<span style=color:#f60>1</span>} = <span style=color:#87ceeb>&#39;hello world&#39;</span>
+</span></span><span style=display:flex><span>class(A)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>B = rand(<span style=color:#f60>3</span>,<span style=color:#f60>4</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear;clc;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Student.age = <span style=color:#f60>18</span>                                               <span style=color:#0f0>% 维度1</span>
+</span></span><span style=display:flex><span>Student.name = <span style=color:#87ceeb>&#39;xiao&#39;</span>                                          <span style=color:#0f0>% 维度2</span>
+</span></span><span style=display:flex><span>Student.scores = rand(<span style=color:#f60>10</span>,<span style=color:#f60>1</span>)                                    <span style=color:#0f0>% 维度3</span>
+</span></span><span style=display:flex><span>Student.scores                                                 <span style=color:#0f0>% 读取结构体</span>
+</span></span><span style=display:flex><span>class(Student)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 保存与导入</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% way1：右击可以保存</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% way2：下面代码</span>
+</span></span><span style=display:flex><span>save(<span style=color:#87ceeb>&#39;student.mat&#39;</span>,<span style=color:#87ceeb>&#39;Student&#39;</span>)
+</span></span><span style=display:flex><span>save(<span style=color:#87ceeb>&#39;D:\\\\kdat\\\\day2\\\\student.mat&#39;</span>,<span style=color:#87ceeb>&#39;Student&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% way1：直接拖进来</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% way2：下面代码</span>
+</span></span><span style=display:flex><span>load(<span style=color:#87ceeb>&#39;student.mat&#39;</span>)
+</span></span><span style=display:flex><span>load(<span style=color:#87ceeb>&#39;D:\\\\kdat\\\\day2\\\\student.mat&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 练习</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>load(<span style=color:#87ceeb>&#39;D:\\\\kdat\\\\day2\\\\sub001.mat&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#0f0>% load(&#39;D:\\\\kdat\\\\day2\\\\sub002.mat&#39;)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 20点51卡了</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% fs是采样率</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% nch是通道数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 查看大小</span>
+</span></span><span style=display:flex><span>size(nirs_data.oxyData);
+</span></span><span style=display:flex><span>dc(:,:,<span style=color:#f60>1</span>) = nirs_data.oxyData;
+</span></span><span style=display:flex><span>dc(:,:,<span style=color:#f60>2</span>) = nirs_data.dxyData;
+</span></span><span style=display:flex><span>dc(:,:,<span style=color:#f60>3</span>) = nirs_data.tHbData;
+</span></span><span style=display:flex><span>roi = dc([<span style=color:#f60>100</span>:<span style=color:#f60>150</span>,<span style=color:red>end</span>-<span style=color:#f60>499</span>:<span style=color:red>end</span>],:,<span style=color:#f60>1</span>:<span style=color:#f60>2</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>qpfh(<span style=color:#f60>3</span>,<span style=color:#f60>4</span>)
+</span></span><span style=display:flex><span>doc qpfh
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>C = <span style=color:#f60>7</span>
+</span></span><span style=display:flex><span>D = num2str(C)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 将数字转换成字符串</span>
+</span></span><span style=display:flex><span>E = [<span style=color:#87ceeb>&#39;sub00&#39;</span>,<span style=color:#f60>1</span>,<span style=color:#87ceeb>&#39;.mat&#39;</span>]
+</span></span><span style=display:flex><span>F = [<span style=color:#87ceeb>&#39;sub00&#39;</span>,num2str(<span style=color:#f60>1</span>),<span style=color:#87ceeb>&#39;.mat&#39;</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% strcat 拼接字符串</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% [] 也可以拼接字符串</span>
+</span></span><span style=display:flex><span>G = strcat(<span style=color:#87ceeb>&#39;sub00&#39;</span>,num2str(<span style=color:#f60>1</span>),<span style=color:#87ceeb>&#39;.mat&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% for循环</span>
+</span></span><span style=display:flex><span>H = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> I &gt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    I = I+<span style=color:#f60>1</span>
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>H =<span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> I == <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    I = I+<span style=color:#f60>1</span>
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>H = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> H &gt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    H = H+<span style=color:#f60>1</span>;
+</span></span><span style=display:flex><span><span style=color:red>else</span>
+</span></span><span style=display:flex><span>    H = H*<span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 卡了</span>
+</span></span><span style=display:flex><span>H = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> H &gt; <span style=color:#f60>11</span>
+</span></span><span style=display:flex><span>    H = H+<span style=color:#f60>1</span>;
+</span></span><span style=display:flex><span><span style=color:red>elseif</span> H &gt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    H = H +<span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span><span style=color:red>else</span> H = H*<span style=color:#f60>5</span>;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>disp(H)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> J = <span style=color:#f60>1</span>:<span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span>    K = J*J;
+</span></span><span style=display:flex><span>    disp(K)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> J = [<span style=color:#f60>1</span>,<span style=color:#f60>2</span>,<span style=color:#f60>3</span>,<span style=color:#f60>4</span>,<span style=color:#f60>5</span>]
+</span></span><span style=display:flex><span>    J
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 假如有30个被试</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 文件名分别是</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% sub001.mat to sub030.mat</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 写段代码一次打印出来每一个被试的文件名的信息</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:<span style=color:#f60>30</span>;
+</span></span><span style=display:flex><span>    j = num2str(i);
+</span></span><span style=display:flex><span>    <span style=color:red>if</span> i &lt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub00&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>else</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub0&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>end</span>
+</span></span><span style=display:flex><span>    disp(name)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 21：49卡了</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从sub001.mat拼接到sub100.mat</span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:<span style=color:#f60>100</span>;
+</span></span><span style=display:flex><span>    j = num2str(i);
+</span></span><span style=display:flex><span>    <span style=color:red>if</span> i &lt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub00&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>elseif</span> i &lt; <span style=color:#f60>100</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub0&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>else</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>end</span>
+</span></span><span style=display:flex><span>    disp(name)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span></code></pre></div><h2 id=20220622>20220622</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>a = <span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>b = <span style=color:#87ceeb>&#39;1&#39;</span>
+</span></span><span style=display:flex><span>c = <span style=color:#87ceeb>&#39;A&#39;</span>
+</span></span><span style=display:flex><span>class(a)
+</span></span><span style=display:flex><span>b_1 = class(b)
+</span></span><span style=display:flex><span>c_1 = class(c)
+</span></span><span style=display:flex><span>d = [<span style=color:#f60>1</span> <span style=color:#f60>3</span>]
+</span></span><span style=display:flex><span>e = [<span style=color:#f60>1</span>,<span style=color:#f60>3</span>,<span style=color:#f60>5</span>,<span style=color:#f60>8</span>,<span style=color:#f60>9</span>,<span style=color:#f60>10</span>]
+</span></span><span style=display:flex><span>f = [<span style=color:#f60>3</span>;<span style=color:#f60>5</span>]
+</span></span><span style=display:flex><span>g = [<span style=color:#f60>1</span>,<span style=color:#f60>3</span>,<span style=color:#f60>5</span>,<span style=color:#f60>8</span>,<span style=color:#f60>9</span>,<span style=color:#f60>10</span>;<span style=color:#f60>1</span>,<span style=color:#f60>2</span>,<span style=color:#f60>3</span>,<span style=color:#f60>4</span>,<span style=color:#f60>5</span>,<span style=color:#f60>6</span>]
+</span></span><span style=display:flex><span>h = f&#39;
+</span></span><span style=display:flex><span>i = <span style=color:#f60>1</span>:<span style=color:#f60>1</span>:<span style=color:#f60>100</span>
+</span></span><span style=display:flex><span>j = <span style=color:#f60>100</span>:-<span style=color:#f60>1</span>:<span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>k = length(e)                                           <span style=color:#0f0>% 查看一维向量的元素</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>l = [<span style=color:#f60>2</span>,<span style=color:#f60>6</span>,<span style=color:#f60>1</span>,<span style=color:#f60>9</span>,<span style=color:#f60>4</span>,<span style=color:#f60>8</span>,<span style=color:#f60>3</span>]
+</span></span><span style=display:flex><span>l_1 = class(l)                                                   <span style=color:#0f0>% 查看类型</span>
+</span></span><span style=display:flex><span>l_2 = length(l)                                              <span style=color:#0f0>% 查看元素个数</span>
+</span></span><span style=display:flex><span>l(<span style=color:#f60>4</span>) = <span style=color:#f60>19</span>
+</span></span><span style=display:flex><span>l([<span style=color:#f60>2</span>,<span style=color:#f60>5</span>]) = [<span style=color:#f60>16</span>,<span style=color:#f60>14</span>]                                        <span style=color:#0f0>% 提取更改多个原始</span>
+</span></span><span style=display:flex><span>m = l(<span style=color:red>end</span>)
+</span></span><span style=display:flex><span>l([<span style=color:red>end</span>-<span style=color:#f60>3</span>:<span style=color:red>end</span>]) = [<span style=color:#f60>1</span>,<span style=color:#f60>2</span>,<span style=color:#f60>3</span>,<span style=color:#f60>4</span>]                                <span style=color:#0f0>% 提取更改后四个数</span>
+</span></span><span style=display:flex><span>l(<span style=color:red>end</span>-<span style=color:#f60>3</span>:<span style=color:red>end</span>) = [<span style=color:#f60>1</span>,<span style=color:#f60>2</span>,<span style=color:#f60>3</span>,<span style=color:#f60>4</span>]                                  <span style=color:#0f0>% 提取更改后四个数</span>
+</span></span><span style=display:flex><span>l(<span style=color:#f60>3</span>) = []                                                   <span style=color:#0f0>% 删除某一个元素</span>
+</span></span><span style=display:flex><span>n = [<span style=color:#f60>1</span>,<span style=color:#f60>2</span>]
+</span></span><span style=display:flex><span>n(<span style=color:#f60>3</span>) = l(<span style=color:#f60>1</span>)
+</span></span><span style=display:flex><span>n(<span style=color:#f60>4</span>:<span style=color:#f60>7</span>) = l(<span style=color:#f60>1</span>:<span style=color:#f60>4</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>o = [<span style=color:#f60>1</span>:<span style=color:#f60>3</span>]
+</span></span><span style=display:flex><span>p = [<span style=color:#f60>4</span>:<span style=color:#f60>6</span>]
+</span></span><span style=display:flex><span>q = [o;p]
+</span></span><span style=display:flex><span>r = q&#39;
+</span></span><span style=display:flex><span>s(<span style=color:#f60>4</span>,<span style=color:#f60>5</span>) = <span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>t = rand (<span style=color:#f60>4</span>,<span style=color:#f60>5</span>)
+</span></span><span style=display:flex><span>u = t(<span style=color:#f60>2</span>,<span style=color:#f60>2</span>:<span style=color:#f60>4</span>)
+</span></span><span style=display:flex><span>v = t(:,<span style=color:#f60>2</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>x = size(t)
+</span></span><span style=display:flex><span>x_1 = size(t,<span style=color:#f60>1</span>)
+</span></span><span style=display:flex><span>x_2 = size(t,<span style=color:#f60>2</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>y = [<span style=color:#87ceeb>&#39;hello&#39;</span>,<span style=color:#87ceeb>&#39;world&#39;</span>]
+</span></span><span style=display:flex><span>z = [<span style=color:#87ceeb>&#39;hello&#39;</span>;<span style=color:#87ceeb>&#39;world&#39;</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>A{<span style=color:#f60>1</span>,<span style=color:#f60>1</span>} = <span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>A{<span style=color:#f60>1</span>,<span style=color:#f60>2</span>} = <span style=color:#f60>1</span>:<span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>A{<span style=color:#f60>2</span>,<span style=color:#f60>1</span>} = <span style=color:#87ceeb>&#39;sub001.mat&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%A{2,2} = []</span>
+</span></span><span style=display:flex><span>A{<span style=color:#f60>1</span>,<span style=color:#f60>1</span>} = <span style=color:#87ceeb>&#39;hello world&#39;</span>
+</span></span><span style=display:flex><span>class(A)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>B = rand(<span style=color:#f60>3</span>,<span style=color:#f60>4</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Student.age = <span style=color:#f60>18</span>                                               <span style=color:#0f0>% 维度1</span>
+</span></span><span style=display:flex><span>Student.name = <span style=color:#87ceeb>&#39;xiao&#39;</span>                                          <span style=color:#0f0>% 维度2</span>
+</span></span><span style=display:flex><span>Student.scores = rand(<span style=color:#f60>10</span>,<span style=color:#f60>1</span>)                                    <span style=color:#0f0>% 维度3</span>
+</span></span><span style=display:flex><span>Student.scores                                                 <span style=color:#0f0>% 读取结构体</span>
+</span></span><span style=display:flex><span>class(Student)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 保存与导入</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% way1：右击可以保存</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% way2：下面代码</span>
+</span></span><span style=display:flex><span>save(<span style=color:#87ceeb>&#39;student.mat&#39;</span>,<span style=color:#87ceeb>&#39;Student&#39;</span>)
+</span></span><span style=display:flex><span>save(<span style=color:#87ceeb>&#39;D:\\\\kdat\\\\day2\\\\student.mat&#39;</span>,<span style=color:#87ceeb>&#39;Student&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% way1：直接拖进来</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% way2：下面代码</span>
+</span></span><span style=display:flex><span>load(<span style=color:#87ceeb>&#39;student.mat&#39;</span>)
+</span></span><span style=display:flex><span>load(<span style=color:#87ceeb>&#39;D:\\\\kdat\\\\day2\\\\student.mat&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 练习</span>
+</span></span><span style=display:flex><span>clear
+</span></span><span style=display:flex><span>clc
+</span></span><span style=display:flex><span>load(<span style=color:#87ceeb>&#39;D:\\\\kdat\\\\day2\\\\sub001.mat&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#0f0>% load(&#39;D:\\\\kdat\\\\day2\\\\sub002.mat&#39;)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 20点51卡了</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% fs是采样率</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% nch是通道数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 查看大小</span>
+</span></span><span style=display:flex><span>size(nirs_data.oxyData);
+</span></span><span style=display:flex><span>dc(:,:,<span style=color:#f60>1</span>) = nirs_data.oxyData;
+</span></span><span style=display:flex><span>dc(:,:,<span style=color:#f60>2</span>) = nirs_data.dxyData;
+</span></span><span style=display:flex><span>dc(:,:,<span style=color:#f60>3</span>) = nirs_data.tHbData;
+</span></span><span style=display:flex><span>roi = dc([<span style=color:#f60>100</span>:<span style=color:#f60>150</span>,<span style=color:red>end</span>-<span style=color:#f60>499</span>:<span style=color:red>end</span>],:,<span style=color:#f60>1</span>:<span style=color:#f60>2</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>qpfh(<span style=color:#f60>3</span>,<span style=color:#f60>4</span>)
+</span></span><span style=display:flex><span>doc qpfh
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span>C = <span style=color:#f60>7</span>
+</span></span><span style=display:flex><span>D = num2str(C)
+</span></span><span style=display:flex><span><span style=color:#0f0>% 将数字转换成字符串</span>
+</span></span><span style=display:flex><span>E = [<span style=color:#87ceeb>&#39;sub00&#39;</span>,<span style=color:#f60>1</span>,<span style=color:#87ceeb>&#39;.mat&#39;</span>]
+</span></span><span style=display:flex><span>F = [<span style=color:#87ceeb>&#39;sub00&#39;</span>,num2str(<span style=color:#f60>1</span>),<span style=color:#87ceeb>&#39;.mat&#39;</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% strcat 拼接字符串</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>% [] 也可以拼接字符串</span>
+</span></span><span style=display:flex><span>G = strcat(<span style=color:#87ceeb>&#39;sub00&#39;</span>,num2str(<span style=color:#f60>1</span>),<span style=color:#87ceeb>&#39;.mat&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% for循环</span>
+</span></span><span style=display:flex><span>H = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> I &gt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    I = I+<span style=color:#f60>1</span>
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>H =<span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> I == <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    I = I+<span style=color:#f60>1</span>
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>H = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> H &gt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    H = H+<span style=color:#f60>1</span>;
+</span></span><span style=display:flex><span><span style=color:red>else</span>
+</span></span><span style=display:flex><span>    H = H*<span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 卡了</span>
+</span></span><span style=display:flex><span>H = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> H &gt; <span style=color:#f60>11</span>
+</span></span><span style=display:flex><span>    H = H+<span style=color:#f60>1</span>;
+</span></span><span style=display:flex><span><span style=color:red>elseif</span> H &gt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    H = H +<span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span><span style=color:red>else</span> H = H*<span style=color:#f60>5</span>;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>disp(H)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> J = <span style=color:#f60>1</span>:<span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span>    K = J*J;
+</span></span><span style=display:flex><span>    disp(K)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> J = [<span style=color:#f60>1</span>,<span style=color:#f60>2</span>,<span style=color:#f60>3</span>,<span style=color:#f60>4</span>,<span style=color:#f60>5</span>]
+</span></span><span style=display:flex><span>    J
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%%</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 假如有30个被试</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 文件名分别是</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% sub001.mat to sub030.mat</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 写段代码一次打印出来每一个被试的文件名的信息</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:<span style=color:#f60>30</span>;
+</span></span><span style=display:flex><span>    j = num2str(i);
+</span></span><span style=display:flex><span>    <span style=color:red>if</span> i &lt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub00&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>else</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub0&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>end</span>
+</span></span><span style=display:flex><span>    disp(name)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 21：49卡了</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 从sub001.mat拼接到sub100.mat</span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:<span style=color:#f60>100</span>;
+</span></span><span style=display:flex><span>    j = num2str(i);
+</span></span><span style=display:flex><span>    <span style=color:red>if</span> i &lt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub00&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>elseif</span> i &lt; <span style=color:#f60>100</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub0&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>else</span>
+</span></span><span style=display:flex><span>        name = strcat(<span style=color:#87ceeb>&#39;sub&#39;</span>,j,<span style=color:#87ceeb>&#39;.mat&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:red>end</span>
+</span></span><span style=display:flex><span>    disp(name)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span></code></pre></div><h2 id=matlab_exercise_20220622>matlab_exercise_20220622</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span><span style=color:#0f0>%num2str 将数字转换成字符串</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%strcat 拼接字符串的 - []</span>
+</span></span><span style=display:flex><span>strcat(<span style=color:#87ceeb>&#39;sub00&#39;</span>,num2str(<span style=color:#f60>1</span>),<span style=color:#87ceeb>&#39;.mat&#39;</span>)
+</span></span><span style=display:flex><span>[<span style=color:#87ceeb>&#39;sub00&#39;</span>,num2str(<span style=color:#f60>1</span>),<span style=color:#87ceeb>&#39;.mat&#39;</span>]
+</span></span><span style=display:flex><span>a = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> a == <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    a = a + <span style=color:#f60>1</span>;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>a = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> a &gt;<span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    a = a + <span style=color:#f60>1</span>;
+</span></span><span style=display:flex><span><span style=color:red>else</span>
+</span></span><span style=display:flex><span>    a = a*<span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>a = <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span><span style=color:red>if</span> a &gt; <span style=color:#f60>11</span>
+</span></span><span style=display:flex><span>    a = a + <span style=color:#f60>1</span>;
+</span></span><span style=display:flex><span><span style=color:red>elseif</span> a &gt; <span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    a = a +<span style=color:#f60>2</span>;
+</span></span><span style=display:flex><span><span style=color:red>else</span>
+</span></span><span style=display:flex><span>    a = a * <span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:<span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span>    b = i * i;
+</span></span><span style=display:flex><span>    disp(b)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = [<span style=color:#f60>2</span> <span style=color:#f60>5</span> <span style=color:#f60>9</span> <span style=color:#f60>10</span> <span style=color:#f60>13</span>]
+</span></span><span style=display:flex><span>    i
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 假如我有一批被试 30个</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%被试的文件名分别为</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%sub01.mat sub02.mat . sub10.mat .. sub30.mat</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%要求大家写段代码 依次打印每个被试的文件名的信息</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% if for []/strcat disp</span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:<span style=color:#f60>30</span>;
+</span></span><span style=display:flex><span>    <span style=color:red>if</span> i &lt; <span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span>        filename = [<span style=color:#87ceeb>&#39;sub0&#39;</span>,num2str(i),<span style=color:#87ceeb>&#39;.mat&#39;</span>];
+</span></span><span style=display:flex><span>    <span style=color:red>else</span>
+</span></span><span style=display:flex><span>        filename = [<span style=color:#87ceeb>&#39;sub&#39;</span>,num2str(i),<span style=color:#87ceeb>&#39;.mat&#39;</span>];
+</span></span><span style=display:flex><span>    <span style=color:red>end</span>
+</span></span><span style=display:flex><span>    disp(filename)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 假如问我有100个被试 从sub001.mat拼接到sub100.mat</span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:<span style=color:#f60>100</span>;
+</span></span><span style=display:flex><span>    <span style=color:red>if</span> i &lt; <span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span>        filename = [<span style=color:#87ceeb>&#39;sub00&#39;</span>,num2str(i),<span style=color:#87ceeb>&#39;.mat&#39;</span>];
+</span></span><span style=display:flex><span>    <span style=color:red>elseif</span> i &lt; <span style=color:#f60>100</span>;
+</span></span><span style=display:flex><span>        filename = [<span style=color:#87ceeb>&#39;sub0&#39;</span>,num2str(i),<span style=color:#87ceeb>&#39;.mat&#39;</span>];
+</span></span><span style=display:flex><span>    <span style=color:red>else</span>
+</span></span><span style=display:flex><span>        filename = [<span style=color:#87ceeb>&#39;sub&#39;</span>,num2str(i),<span style=color:#87ceeb>&#39;.mat&#39;</span>];
+</span></span><span style=display:flex><span>    <span style=color:red>end</span>
+</span></span><span style=display:flex><span>    disp(filename)
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span></code></pre></div><h2 id=timeselect>timeSelect</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span>clear;clc
+</span></span><span style=display:flex><span>filedir = <span style=color:#87ceeb>&#39;D:\\\\datapath\\\\subject01&#39;</span>;
+</span></span><span style=display:flex><span>filelist = dir(fullfile(filedir, <span style=color:#87ceeb>&#39;*.mat&#39;</span>));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:numel(filelist)
+</span></span><span style=display:flex><span>    filename = filelist(i).name;
+</span></span><span style=display:flex><span>    T_indices = strfind(filename, <span style=color:#87ceeb>&#39;T&#39;</span>);
+</span></span><span style=display:flex><span>    last_T_index = T_indices(<span style=color:red>end</span>);
+</span></span><span style=display:flex><span>    time = str2double(filename(last_T_index+<span style=color:#f60>1</span>:last_T_index+<span style=color:#f60>6</span>));
+</span></span><span style=display:flex><span>    filelist(i).time = time;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>clearvars -except filelist
+</span></span><span style=display:flex><span>time_lower = <span style=color:#f60>123000</span>;
+</span></span><span style=display:flex><span>time_upper = <span style=color:#f60>133000</span>;
+</span></span><span style=display:flex><span>filtered_filelist = filelist([filelist.time] &gt;= time_lower &amp; [filelist.time] &lt;= time_upper);
+</span></span></code></pre></div><h2 id=findnan>findNaN</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span>nan_positions = {};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>for</span> i = <span style=color:#f60>1</span>:size(statdatas_HG.seens, <span style=color:#f60>1</span>)
+</span></span><span style=display:flex><span>    <span style=color:red>for</span> j = <span style=color:#f60>1</span>:size(statdatas_HG.seens, <span style=color:#f60>2</span>)
+</span></span><span style=display:flex><span>        nan_positions{<span style=color:red>end</span>+<span style=color:#f60>1</span>} = find(isnan(statdatas_HG.seens{i, j}));
+</span></span><span style=display:flex><span>    <span style=color:red>end</span>
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>nan_positions = cell2mat(nan_positions);
+</span></span><span style=display:flex><span>sum(isnan(imgTypes(<span style=color:#f60>1</span>,:)))
+</span></span></code></pre></div><h2 id=randomdata>randomData</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span>clear;clc
+</span></span><span style=display:flex><span><span style=color:red>for</span> i=<span style=color:#f60>1</span>:<span style=color:#f60>10</span>
+</span></span><span style=display:flex><span>    a=randi([<span style=color:#f60>1</span>, <span style=color:#f60>9</span>], <span style=color:#f60>108</span>, <span style=color:#f60>4</span>); <span style=color:#0f0>% 108*4 double</span>
+</span></span><span style=display:flex><span>    aList{i}=a;
+</span></span><span style=display:flex><span><span style=color:red>end</span>
+</span></span><span style=display:flex><span>save(<span style=color:#87ceeb>&#39;aList.mat&#39;</span>,<span style=color:#87ceeb>&#39;aList&#39;</span>);
+</span></span></code></pre></div><hr></article><script src=https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js></script><script>addBackToTop({diameter:66})</script></div></main></body></html>
