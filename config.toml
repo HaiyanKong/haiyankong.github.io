@@ -41,11 +41,11 @@ theme = ["hugo-theme-nostyleplease"]
     isListGroupByDate = true
     isFooter = true
 
-    back_home_text = "Back to Home"
-    text1 = ""
-    link1 = "//"
-    text2 = ""
-    link2 = "//"
+    #back_home_text = "Back to Home"
+    #text1 = ""
+    #link1 = "//"
+    #text2 = ""
+    #link2 = "//"
     #text3 = ""
     #link3 = "//"
     #text4 = ""
