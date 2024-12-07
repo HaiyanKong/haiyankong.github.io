@@ -5,6 +5,10 @@ toc: true
 tocBorder: true
 ---
 
+[返回目录](/wiki/)
+
+---
+
 # Installation
 
 Download the package in the [Zotero website↗](https://www.zotero.org/download/).

@@ -5,6 +5,10 @@ toc: true
 tocBorder: true
 ---
 
+[返回目录](/wiki/)
+
+---
+
 # 教程
 
 - 格拉斯哥大学心理系教程 [psyTeachR↗](https://psyteachr.github.io/)

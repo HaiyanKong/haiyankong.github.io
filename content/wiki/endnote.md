@@ -5,6 +5,10 @@ toc: true
 tocBorder: true
 ---
 
+[返回目录](/wiki/)
+
+---
+
 # 问题解决
 
 ## Endnote 条目的期刊 (Journal) 大小写与该条目对应 Preview 的期刊大小写不一致

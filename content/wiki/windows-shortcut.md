@@ -5,6 +5,10 @@ toc: true
 tocBorder: true
 ---
 
+[返回目录](/wiki/)
+
+---
+
 ## Windows
 
 检索：Ctrl + F

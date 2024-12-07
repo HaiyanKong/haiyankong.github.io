@@ -1,12 +1,15 @@
 ---
-draft: true
 title: "Sync Obsidian to Android"
 slug: "sync-obsidian-android"
 toc: true
 tocBorder: true
 ---
 
-2023-01-23
+[返回目录](/wiki/)
+
+本文发布日期：2023-01-23（内容可能过期了）
+
+---
 
 ## Step1: Prepare the followings
 
