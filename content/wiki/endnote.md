@@ -9,27 +9,27 @@ tocBorder: true
 
 ---
 
+> 本文内容：Endnote 备忘录
+
 # 问题解决
 
 ## Endnote 条目的期刊 (Journal) 大小写与该条目对应 Preview 的期刊大小写不一致
 
-使用 EndNote 插入论文参考文献的时，有时会遇到一些条目的参考文献中期刊名称为全大写状态（如图  1），但是检查了对应条目的期刊信息（Journal），发现条目的期刊信息并没有问题（如图  2）。
+使用 EndNote 插入论文参考文献的时，有时会遇到一些条目的参考文献中期刊名称为全大写状态（Figure 1），但是检查了对应条目的期刊信息（Journal），发现条目的期刊信息并没有问题（Figure 2）。
 
 {{<figure src="/wiki/endnote-tips-1.jpg" caption="Figure 1">}}
 
 {{<figure src="/wiki/endnote-tips-2.jpg" caption="Figure 2">}}
 
-解决方案：如图 3 所示，点击"Edit - Output Style - Edit 'APA 7th'  "。
+解决方案：Figure 3 所示，点击"Edit - Output Style - Edit 'APA 7th'  "。
 
 备注：因为我当前使用的格式是 APA 7th，所以 Edit 'APA 7th'  该位置显示的是 APA 7th；如果你使用的 XXX 格式，那么该位置应该是  Edit 'XXX'。
 
 {{<figure src="/wiki/endnote-tips-3.jpg" caption="Figure 3">}}
 
-如图 4 所示，在 “Journal Names” 一栏，将“Journal Name Format”选择为“Don't replace”，然后保存。
+Figure 4 所示，在 “Journal Names” 一栏，将“Journal Name Format”选择为“Don't replace”，然后保存。然后可以发现， Preview 中的期刊大小写变正常了！
 
 {{<figure src="/wiki/endnote-tips-4.jpg" caption="Figure 4">}}
-
-可以发现， Preview 中的期刊大小写变正常了！
 
 ## Endnote 插入文献时出现 {，#} 乱码
 
@@ -45,15 +45,15 @@ tocBorder: true
 
 改成文中不会出现的{[{后，即使文中使用了大括号也不会再出现类似的错误了。
 
-### 参考
+### 参考资料
 
-- [endnote插入文献时出现{，#}这样的乱码，怎么解？↗](https://www.zhihu.com/question/44969655)
+- [endnote插入文献时出现{，#}这样的乱码，怎么解？](https://www.zhihu.com/question/44969655)
 
 ## Endnote 批量修改 notes，research notes 等列
 
 {{<figure src="/wiki/endnote-tips-5.png" caption="Figure 5">}}
 
-### 参考
+### 参考资料
 
-- [endnote 批量修改notes，research notes等列↗](https://blog.csdn.net/m0_37407587/article/details/88040746)
-- [EndNote X9使用进阶五：阅读文献和如何添加笔记↗](http://www.bio-review.com/endnote-x9-4/)
+- [endnote 批量修改notes，research notes等列](https://blog.csdn.net/m0_37407587/article/details/88040746)
+- [EndNote X9使用进阶五：阅读文献和如何添加笔记](http://www.bio-review.com/endnote-x9-4/)

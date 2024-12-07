@@ -1,6 +1,6 @@
 ---
-title: "画图"
-slug: "plot"
+title: "Figure"
+slug: "figure"
 toc: true
 tocBorder: true
 ---
@@ -8,6 +8,8 @@ tocBorder: true
 [返回目录](/wiki/)
 
 ---
+
+> 本文内容：画图备忘录
 
 # 类型
 

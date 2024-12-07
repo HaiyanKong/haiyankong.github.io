@@ -9,13 +9,15 @@ tocBorder: true
 
 ---
 
+> 本文内容：Zotero 备忘录
+
 # Installation
 
-Download the package in the [Zotero website↗](https://www.zotero.org/download/).
+Download the package in the [Zotero website](https://www.zotero.org/download/).
 
 # Basic Settings
 
-Click the **Settings**(Zotero 6 is **Preference**) in **Edit**, and then:
+Click the **Settings** (Zotero 6 is **Preference**) in **Edit**, and then:
 
 ## General
 
@@ -31,7 +33,7 @@ My settings showed in Figure 1.
 
 ## Sync
 
-My settings showed in  Figure 2, I used [InfiniCLOUD↗](https://infini-cloud.net/en/index.html) for cloud store items and pdf files in my Zotero. The free plan in InfiniCLOUD (Figure 2.1) is enough for these literature files storage (I think).
+My settings showed in  Figure 2, I used [InfiniCLOUD](https://infini-cloud.net/en/index.html) for cloud store items and pdf files in my Zotero. The free plan in InfiniCLOUD (Figure 2.1) is enough.
 
 {{<figure src="/wiki/zotero-tip-2.jpg" caption="Figure 2.Sync settings">}}
 
@@ -114,5 +116,5 @@ Just select the item, and then press “Ctrl”.
 
 # Reference
 
-- [Awesome Zotero Plugins↗](https://plugins.zotero-chinese.com/charts)
-- [Zotero 插件下载↗](https://plugins.zotero-chinese.com/#/?id=zotero-插件下载)
+- [Awesome Zotero Plugins](https://plugins.zotero-chinese.com/charts)
+- [Zotero 插件下载](https://plugins.zotero-chinese.com/#/?id=zotero-插件下载)

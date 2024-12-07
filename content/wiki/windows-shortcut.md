@@ -1,5 +1,5 @@
 ---
-title: "Windows 电脑快捷键记录"
+title: "Windows 快捷键"
 slug: "windows-shortcut"
 toc: true
 tocBorder: true
@@ -9,7 +9,9 @@ tocBorder: true
 
 ---
 
-## Windows
+> 本文内容：Windows 电脑常用软件的常用快捷键记录
+
+# Windows
 
 检索：Ctrl + F
 
@@ -35,7 +37,7 @@ tocBorder: true
 
 安装 11 系统时使用 mailto:no@thankyou.com 作为用户名，可以跳过联网账户，直接创建本地账户 mailto:no@thankyou.com
 
-## R
+# R
 
 运行选中的代码：Ctrl + Enter
 
@@ -51,7 +53,7 @@ tocBorder: true
 
 到达某路径 `setwd(path)`
 
-## MATLAB
+# MATLAB
 
 注释：Ctrl + R
 
@@ -79,7 +81,7 @@ debug 模式下步进，但是会进入到子函数内再步进：F11
 
 到达某路径 `cd path`
 
-## Visual Studio Code
+# Visual Studio Code
 
 注释/取消注释：Ctrl + /
 
@@ -105,17 +107,17 @@ debug 模式下步进，但是会进入到子函数内再步进：F11
 
 行减少缩进：Ctrl + ]
 
-## Sublime Text
+# Sublime Text
 
 注释/取消注释：Ctrl + /
 
-## Notepad++
+# Notepad++
 
 注释：Ctrl + Q
 
 取消注释：Ctrl + Shift + Q
 
-## Word
+# Word
 
 输入空方框：先输入数字 2610 ，再按 Alt+X 键
 
@@ -125,11 +127,11 @@ debug 模式下步进，但是会进入到子函数内再步进：F11
 
 仅粘贴文本：Ctrl + Shrift + V
 
-## Excel
+# Excel
 
 单元格内换行：ALT + Enter
 
-## Obsidian
+# Obsidian
 
 工作区：Ctrl + W
 
@@ -145,14 +147,14 @@ Admonitions：Ctrl +P，然后输入 `ad`
 
 纯文本格式粘贴：Ctrl + Shift +V
 
-## Notion
+# Notion
 
 新窗口打开该页面（需要选择一个页面）：Ctrl + Shift +Enter
 
-## Zotero
+# Zotero
 
 打开折叠的条目或者文件夹：Shift + =
 
-## 浏览器
+# 浏览器
 
 新标签页打开网页链接：Ctrl +单击

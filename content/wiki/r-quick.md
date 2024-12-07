@@ -9,11 +9,13 @@ tocBorder: true
 
 ---
 
+> 本文内容：R 速查
+
 # 教程
 
-- 格拉斯哥大学心理系教程 [psyTeachR↗](https://psyteachr.github.io/)
-- 北京大学李东风R语言教程 [R语言教程↗](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/index.html)
-- https://nyu-cdsc.github.io/learningr/
+- [格拉斯哥大学心理系教程 psyTeachR](https://psyteachr.github.io/)
+- [北京大学李东风R语言教程 R 语言教程](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/index.html)
+- [Learning R: 2019 Summer Workshop for NYU CDSC Lab](https://nyu-cdsc.github.io/learningr/)
 
 # Packages
 
@@ -110,5 +112,5 @@ https://cran.r-project.org/bin/windows/Rtools/
 
 ## Reference
 
-- [A step by step (screenshots) tutorial for upgrading R on Windows↗](https://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/)
+- [A step by step (screenshots) tutorial for upgrading R on Windows](https://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/)
 - https://www.bilibili.com/read/cv18580753/

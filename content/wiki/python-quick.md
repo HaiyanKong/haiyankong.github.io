@@ -9,6 +9,8 @@ tocBorder: true
 
 ---
 
+> 本文内容：Python 速查
+
 ```python
 import os.path as op
 import os
@@ -19,22 +21,22 @@ import numpy as np
 import mne
 ```
 
-## 获取代码路径
+# 获取代码路径
 
 ```python
 import os
 os.getcwd()
 ```
 
-## 打印出分割线
+# 打印出分割线
 
 ```python
 print('-' * 50)
 ```
 
-## 绘图后端
+# 绘图后端
 
-### 将 Matplotlib 的后端设置为使用 Qt5Agg 后端
+## 将 Matplotlib 的后端设置为使用 Qt5Agg 后端
 
 ```python
 # pip install matplotlib
@@ -42,7 +44,7 @@ import matplotlib
 matplotlib.use('Qt5Agg')
 ```
 
-### 将绘图后端设置为默认后端（Agg）
+## 将绘图后端设置为默认后端（Agg）
 
 ```python
 # pip install matplotlib
@@ -50,7 +52,7 @@ import matplotlib
 matplotlib.use('Agg')
 ```
 
-### 画图说明：qt 代表画出来，inline 代表画在里面
+## 画图说明：qt 代表画出来，inline 代表画在里面
 
 ```python
 %matplotlib qt
@@ -58,54 +60,54 @@ matplotlib.use('Agg')
 %matplotlib inline
 ```
 
-## 清除全局变量
+# 清除全局变量
 
 ```python
 globals().clear()
 ```
 
-## 查看函数
+# 查看函数
 
 ```python
 mne.Epochs?
 ```
 
-## 数据读取与预览代码
+# 数据读取与预览代码
 
-### 获取原始数据
+## 获取原始数据
 
 ```python
 data = raw.get_data()
 print(data)
 ```
 
-### 行列
+## 行列
 
-### 几行几列
+## 几行几列
 
 ```python
 data.shape
 ```
 
-### 前几行
+## 前几行
 
 ```python
 data.head(10)
 ```
 
-### 最后几列
+## 最后几列
 
 ```python
 data.tail(20)
 ```
 
-### 每一列的内容是什么
+## 每一列的内容是什么
 
 ```python
 data.info
 ```
 
-### 每一列的数据有什么特征
+## 每一列的数据有什么特征
 
 ```python
 # 数值类 numerical data 与 类别型数据(categorical data) 均适用
