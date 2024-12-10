@@ -1,11 +1,12 @@
 {{ define "main" }}
-{{ partial "back_link.html" .}}
+
+<a href="/wiki/">Wiki/</a>
 
 <article>
 
     <center>
         <h1>{{ .Title }}</h1>
-        <p><time datetime="{{ .Date }}">{{ .Date | time.Format site.Params.theme_config.date_format }}</time></p>
+        <!-- <p><time datetime="{{ .Date }}">{{ .Date | time.Format site.Params.theme_config.date_format }}</time></p> -->
     </center>
     
     {{ if .Params.toc }}
@@ -14,13 +15,13 @@
         </aside>
     {{ end }}
 
+    <hr>
+
     {{ .Content }}
 
     <hr>
-    
-</article>
 
-{{ partial "back_link.html" .}}
+</article>
 
 {{ end }}
 

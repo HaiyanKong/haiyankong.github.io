@@ -5,10 +5,6 @@ toc: true
 tocBorder: true
 ---
 
-[返回目录](/wiki/)
-
----
-
 > 本文内容：将 Windows 的 Obsidian 和安卓手机的 Obsidian 同步
 > 
 > 本文发布于 2023-01-23，部分内容可能过期了

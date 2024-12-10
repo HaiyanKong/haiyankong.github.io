@@ -5,10 +5,6 @@ toc: true
 tocBorder: true
 ---
 
-[返回目录](/wiki/)
-
----
-
 > 本文内容：MATLAB 速查
 
 # 画图

@@ -1,8 +1,8 @@
 baseURL = '/'
 languageCode = 'en-us'
 DefaultContentLanguage = "en"
-title = "Haiyan Kong"
-theme = ["hugo-theme-nostyleplease"]
+title = "Haiyan Kong | 孔海燕"
+#theme = ["hugo-theme-nostyleplease"]
 
 [module]
   [module.hugoVersion]
@@ -40,16 +40,5 @@ theme = ["hugo-theme-nostyleplease"]
     date_format = "2006-01-02"
     isListGroupByDate = true
     isFooter = true
-
-    #back_home_text = "Back to Home"
-    #text1 = ""
-    #link1 = "//"
-    #text2 = ""
-    #link2 = "//"
-    #text3 = ""
-    #link3 = "//"
-    #text4 = ""
-    #link4 = "//"
-    #text5 = ""
-    #link5 = "//"
-    #back_to_previous_text = "Back"
+    text = "test"
+    link = "/"

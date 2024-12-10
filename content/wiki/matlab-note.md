@@ -5,10 +5,6 @@ toc: true
 tocBorder: true
 ---
 
-[返回目录](/wiki/)
-
----
-
 > 本文内容：MATLAB 笔记
 
 # 各种乱七八糟还没整理的东西

@@ -1,11 +1,14 @@
 {{ define "main" }}
 
-{{ partial "back_link.html" .}}
-
-<h1>{{ .Title }}</h1>
+<a href="/posts/">Post/</a>
 
 <article>
 
+    <center>
+        <h1>{{ .Title }}</h1>
+        <p><time datetime="{{ .Date }}">{{ .Date | time.Format site.Params.theme_config.date_format }}</time></p>
+    </center>
+    
     {{ if .Params.toc }}
         <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
             {{ .TableOfContents }}
@@ -13,11 +16,10 @@
     {{ end }}
 
     {{ .Content }}
-    
-    <br>
+
+    <hr>
     
 </article>
 
-{{ partial "back_link.html" .}}
-
 {{ end }}
+

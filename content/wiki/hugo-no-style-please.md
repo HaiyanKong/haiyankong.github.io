@@ -1,13 +1,9 @@
 ---
-draft: true
-title: "Theme"
-slug: "theme"
+title: "Hugo no style please"
+slug: "hugo-no-style-please"
+custom_js: [mouse_coords]
 toc: true
 tocBorder: true
----
-
-[返回目录](/wiki/)
-
 ---
 
 # TOC
@@ -85,10 +81,6 @@ Sint sit cillum pariatur eiusmod nulla pariatur ipsum.
 #### Heading four
 
 Sint sit cillum pariatur eiusmod nulla pariatur ipsum.
-
-##### Heading 5
-
-###### Heading 6
 
 # Paragraph
 
@@ -190,7 +182,7 @@ Table1
 
 ## image with link
 
-[![Manny Pacquiao](/image/logo.png)](https://youtu.be/s6bCmZmy9aQ)
+[![Test](/image/logo.png)](https://www.bing.com/)
 
 Logo of *no style, please!* theme[^3]
 

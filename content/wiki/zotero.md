@@ -5,10 +5,6 @@ toc: true
 tocBorder: true
 ---
 
-[返回目录](/wiki/)
-
----
-
 > 本文内容：Zotero 备忘录
 
 # Installation

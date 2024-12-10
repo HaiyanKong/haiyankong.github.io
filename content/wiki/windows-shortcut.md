@@ -5,10 +5,6 @@ toc: true
 tocBorder: true
 ---
 
-[返回目录](/wiki/)
-
----
-
 > 本文内容：Windows 电脑常用软件的常用快捷键记录
 
 # Windows
@@ -43,9 +39,9 @@ tocBorder: true
 
 注释/取消注释：Ctrl + Shift + C
 
-撤销：Ctrl + Z
+查找：Ctrl + F // 替换：Ctrl + Shift + J（直接使用查找功能就可以唤起替换功能）
 
-取消撤销：Ctrl + Shift + Z
+撤销：Ctrl + Z // 取消撤销：Ctrl + Shift + Z
 
 快速添加 section 标签：Ctrl +Shift + R
 

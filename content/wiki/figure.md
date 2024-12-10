@@ -5,10 +5,6 @@ toc: true
 tocBorder: true
 ---
 
-[返回目录](/wiki/)
-
----
-
 > 本文内容：画图备忘录
 
 # 类型
@@ -55,6 +51,14 @@ Colormap setup for standardizing commonly-plotting oceanographic variables
 Repo: https://github.com/matplotlib/cmocean
 
 Link: https://matplotlib.org/cmocean/
+
+Panoply netCDF, HDF and GRIB Data Viewer
+
+https://www.giss.nasa.gov/tools/panoply/colorbars/
+
+ColorBrewer: Color Advice for Maps
+
+https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3
 
 # 系列
 
