@@ -18,7 +18,7 @@ tocBorder: true
 - [[Download Link]](https://github.com/helloworld1/FreeOTPPlus) FreeOTP+
 - Google Authenticator
 - Wear OS
-- 白描证件照【收费】【已买，手机号登录】
+- 白描证件照【收费】【买断制，手机号登录】
 - Clash
 
 # 杂项

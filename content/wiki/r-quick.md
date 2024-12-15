@@ -106,6 +106,22 @@ https://cran.r-project.org/bin/windows/Rtools/
 
 {{<figure src="/wiki/r-quick-10.png" caption="Figure 10">}}
 
+## 修改变量水平
+
+```
+library(dplyr)
+
+df <- df %>% 
+	mutate(gender = recode(gender,  "f" = "female", "m" = "male"))
+
+```
+
+```
+df$gender[df$gender == "f"] <- "female"
+df$gender[df$gender == "m"] <- "male"
+```
+
+
 ## Reference
 
 - [A step by step (screenshots) tutorial for upgrading R on Windows](https://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/)

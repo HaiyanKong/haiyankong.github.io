@@ -20,16 +20,16 @@ tocBorder: true
 - [[Download Link]](https://pan.baidu.com/download#win) 百度网盘
 - [[Download Link]](https://lockhunter.com/download.htm) LockHunter：解决“文件被占用”
 - [[Download Link]](https://getquicker.net/Download) Quicker：鼠标快捷键【收费】【购买年会员】
-- [[Download Link]](https://baimiao.uzero.cn/) 白描：OCR 识别【收费】【已买，手机号登录】
+- [[Download Link]](https://baimiao.uzero.cn/) 白描：OCR 识别【收费】【买断制，手机号登录】
 - [[Download Link]](https://www.ccleaner.com/zh-cn/ccleaner/download/standard) CCleaner：电脑清理【收费】
 - [[Download Link]](https://www.7-zip.org/download.html) 7-zip：解压缩软件
-- [[Download Link]](https://www.startallback.com/) StartAllBack: Windows 开始菜单增强工具【收费，可以试用 100 天】【已买*2，序列码激活】
+- [[Download Link]](https://www.startallback.com/) StartAllBack: Windows 开始菜单增强工具【收费，可以试用 100 天】【买断制*2，序列码激活】
 - [[Download Link]](https://desktop.github.com/) GitHub
 - [[Download Link]](https://github.com/gohugoio/hugo/releases) Hugo
 - [[Download Link]](https://github.com/2dust/v2rayN/releases) v2rayN
 - Clash
 - [[Download Link]](https://localsend.org/zh-CN) LocalSend：将文件分享到附近的设备。
-- [[Download Link]](https://follow.is/) Follow
+- [[Download Link]](https://follow.is/) Follow：订阅 RSS
 - Edge
 - [[Download Link]](https://www.google.com/chrome/) Chrome
 	- 浏览器插件
@@ -81,7 +81,7 @@ tocBorder: true
 		- Tag Wrangler：管理 tags
 		- ZotLit：连接 Zotero。【相关教程：[ZotLit 最完美的 Zotero 和 Obsidian 联动插件-ZotLit官网](https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian社区插件/zotlit/)，[全网最详细的zotlit模板指南，从zotero到obsidian，写论文从未如此丝滑-微信公众号](https://mp.weixin.qq.com/s/XW59c6lTxK1L_yU2zPsyuw)】
 		- weread：同步微信读书的阅读笔记
-- [[Download Link]](https://typoraio.cn/) Typora：Markdown 编辑器【收费】【已拼单买，邮箱和密码激活】
+- [[Download Link]](https://typoraio.cn/) Typora：Markdown 编辑器【收费】【买断制，邮箱和密码激活】
 	- [[Download Link]](https://babudiu.com/archives/typora/) 0.9.96 版本免费
 - [[Download Link]](https://www.drawio.com/) [draw.io](http://draw.io/)：流程图制作工具
 	- 如果使用频率不高，也可以直接使用在线工具，[ioDraw](https://www.iodraw.com/disk) 在线的流程图制作工具，可以直接保存到 GitHub
@@ -120,6 +120,7 @@ tocBorder: true
 - [[Download Link]](https://github.com/Genymobile/scrcpy) Genymobile/scrcpy：Display and control your Android device
 - [[Download Link]](https://archive.mpi.nl/tla/elan) LAN | The Language Archive：视频标注软件
 - [[Download Link]](https://obsproject.com/download) OBS：录屏工具
+- [[Download Link]](https://www.gimp.org/) GIMP：开源图像编辑器
 
 # Archive
 

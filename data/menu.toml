@@ -37,5 +37,5 @@ title = "Publication / Manuscript&nbsp;&nbsp;<a href='https://scholar.google.com
 title = "Misc"
     [[entries.entries]]
     title = "In my free time, I like running. Here is my <a href='https://haiyankong.github.io/workout/' target='_blank'>running map</a>."
-    [[entries.entries]]
-    title = "<b>Hugo Sewing</b>: Hugo Sewing is a Hugo theme for static websites that I created. It is a simple and flexible theme suitable for personal blog and group website.&nbsp;<a href='https://hugo-sewing.vercel.app/' target='_blank'>[Demo]</a>&nbsp;<a href='https://github.com/HaiyanKong/hugo-sewing' target='_blank'>[Repository]</a>&nbsp;<a href='https://github.com/HaiyanKong/hugo-sewing-template' target='_blank'>[Template]</a>"
+    #[[entries.entries]]
+    #title = "<b>Hugo Sewing</b>: Hugo Sewing is a Hugo theme for static websites that I created. It is a simple and flexible theme suitable for personal blog and group website.&nbsp;<a href='https://hugo-sewing.vercel.app/' target='_blank'>[Demo]</a>&nbsp;<a href='https://github.com/HaiyanKong/hugo-sewing' target='_blank'>[Repository]</a>&nbsp;<a href='https://github.com/HaiyanKong/hugo-sewing-template' target='_blank'>[Template]</a>"
