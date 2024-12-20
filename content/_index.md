@@ -2,8 +2,9 @@
 ---
 
 {{< figure 
-    src="/info/profile_haiyankong.jpg"
+    src="/info/profile.jpg"
     alt="Profile"
-    width="180px"
+    width="230px"
     caption="Welcome to my website!"
     >}}
+
