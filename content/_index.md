@@ -2,9 +2,9 @@
 ---
 
 {{< figure 
-    src="/info/profile.jpg"
+    src="/info/new.jpg"
     alt="Profile"
-    width="230px"
+    width="200px"
     caption="Welcome to my website!"
     >}}
 
