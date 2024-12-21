@@ -39,6 +39,6 @@ title = "Haiyan Kong | 孔海燕"
     appearance = "light"
     date_format = "2006-01-02"
     isListGroupByDate = true
-    isFooter = true
+    isFooter = false
     text = "test"
     link = "/"

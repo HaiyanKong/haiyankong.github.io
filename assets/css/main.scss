@@ -55,23 +55,6 @@
   @include theme(#ffffff, #212121, #666666, #008dda, #ffd900, #66666650);
 }
 
-// @mixin light-appearance {
-//   @include theme(#b6d4c7, #212121, #666666, #012696, #ffd900, #66666650);
-// }
-
-// @mixin light-appearance {
-//   @include theme(#F4EAC5, #212121, #666666, #0b6553, #ffd900, #66666650);
-// }
-
-// @mixin light-appearance {
-//   @include theme(#E4C6D0, #212121, #666666, #425066, #ffd900, #66666650);
-// }
-
-// @mixin light-appearance {
-//   @include theme(#EEEDE8, #212121, #666666, #ff3c00, #ffd900, #66666650);
-// }
-
-
 body[a="dark"] { @include dark-appearance; }
 body[a="light"] { @include light-appearance; }
 
@@ -114,7 +97,7 @@ p { margin: 1rem 0; }
 li { margin: 0.5rem 0rem 0.5rem 0rem; }
 
 .w {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
@@ -127,8 +110,8 @@ hr {
   text-align: center;
   border: 0;
 
-  &:before { content: '//////////' }
-  &:after { content: attr(data-content) '//////////' }
+  &:before { content: '///////////////' }
+  &:after { content: attr(data-content) '///////////////' }
 }
 
 pre {
@@ -172,7 +155,40 @@ img {
 }
 
 figcaption {
-  // text-align: center;
+  text-align: center;
   opacity: 0.7;
+  font-size: 14px !important; 
 }
 
+
+
+// Home layout
+
+/* 主容器样式 */
+.main-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+/* 左侧内容样式 */
+.left-content {
+  flex: 0 0 auto;
+}
+
+/* 右侧内容样式 */
+.right-content {
+  flex: 1;
+}
+
+/* 媒体查询：小屏幕（手机）布局调整 */
+@media (max-width: 768px) {
+  .main-container {
+      display: block; /* 水平布局变为垂直布局 */
+  }
+
+  .left-content, 
+  .right-content {
+      margin-bottom: 20px; /* 添加下间距 */
+  }
+}

@@ -1,21 +1,28 @@
 {{ define "main" }}
-
 <!-- {{ partial "back_link.html" .}} -->
+<div class="main-container">
+    <!-- left -->
+    <div class="left-content">
+        <center>
+            <header>
+                <h3>{{ $.Site.Title }}</h3>
+            </header>
+            {{ .Content }}
+        </center>
+    </div>
 
-<header>
-    <h1>{{ $.Site.Title }}</h1>
-</header>
+    <!-- right -->
+    <div class="right-content">
+        <!-- main content -->
+        {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
 
-{{ .Content }}
-
-{{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
-
-{{ if .Site.Params.theme_config.isFooter }}
-    <hr>
-    <center>
-        Powered by <a href='https://github.com/hanwenguo/hugo-theme-nostyleplease' target='_blank'>hugo-theme-nostyleplease</a>
-    </center>
+        <!-- Footer -->
+        {{ if .Site.Params.theme_config.isFooter }}
+        <hr>
+        <center style="font-size: 14px !important; color: #c3c3c3 !important; font-weight: 400 !important;">
+            Powered by <a href='https://github.com/hanwenguo/hugo-theme-nostyleplease' target='_blank' style="font-size: 14px !important; color: #c3c3c3 !important; font-weight: 400 !important;">hugo-theme-nostyleplease</a>
+        </center>
+        {{ end }}
+    </div>
+</div>
 {{ end }}
-
-{{ end }}
-
