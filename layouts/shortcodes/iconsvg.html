@@ -1,0 +1,13 @@
+<a href="{{ .Get "href" }}" target="{{ .Get "target" }}" 
+    style="display: inline-block; margin-right: 10px; color: {{ .Get "color" | default "inherit" }}; text-decoration: none;">
+    <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" style="width: {{ .Get "width" }}; height: auto;">
+</a>
+
+<!-- Usage -->
+<!-- {< iconlink href="https://example.com" target="_blank" src="/svg/bluesky.svg" alt="Icon" width="24px" >} -->
+<!-- double {}  -->
+
+<!-- Attention! -->
+<!-- svg can found in: .../static/svg  -->
+<!-- new svg download link: https://iconmonstr.com/ ; https://www.svgrepo.com/; https://www.streamlinehq.com/icons/download/bluesky--31088-->
+<!-- last icon no margin-right -->
