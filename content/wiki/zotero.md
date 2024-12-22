@@ -9,80 +9,77 @@ tocBorder: true
 
 # Installation
 
-Download the package in the [Zotero website](https://www.zotero.org/download/).
+Download from the [Zotero website](https://www.zotero.org/download/).
 
 # Basic Settings
 
-Click the **Settings** (Zotero 6 is **Preference**) in **Edit**, and then:
+Edit → Settings
 
 ## General
 
-My settings showed in Figure 1.
+{{<figure src="/wiki/zotero-1.png">}}
 
-{{<figure src="/wiki/zotero-tip-1.jpg" caption="Figure 1.General settings">}}
+{{<figure src="/wiki/zotero-2.png">}}
 
-{{<figure src="/wiki/zotero-tip-1-1.jpg" caption="Figure 1.1.Filename Format settings">}}
+{{<figure src="/wiki/zotero-3.png">}}
 
-```
+```markdown
 {{ year suffix }}{{ authors max="1" name="family" join="_" suffix="_" case="hyphen" }}{{ title truncate="30" case="hyphen" }}
 ```
 
 ## Sync
 
-My settings showed in  Figure 2, I used [InfiniCLOUD](https://infini-cloud.net/en/index.html) for cloud store items and pdf files in my Zotero. The free plan in InfiniCLOUD (Figure 2.1) is enough.
+[InfiniCLOUD](https://infini-cloud.net/en/index.html)
 
-{{<figure src="/wiki/zotero-tip-2.jpg" caption="Figure 2.Sync settings">}}
-
-{{<figure src="/wiki/zotero-tip-2-1.jpg" caption="Figure 2.1.InfiniCLOUD">}}
+{{<figure src="/wiki/zotero-4.png">}}
 
 ## Export
 
-My settings showed in Figure 3.
-
-{{<figure src="/wiki/zotero-tip-3.jpg" caption="Figure 3.Export settings">}}
+{{<figure src="/wiki/zotero-5.png">}}
 
 ## Cite
 
-My settings showed in Figure 4.
-
-{{<figure src="/wiki/zotero-tip-4.jpg" caption="Figure 4.Cite settings">}}
+{{<figure src="/wiki/zotero-6.png">}}
 
 ## Advanced
 
-My settings showed in Figure 5 & 6.
+注意：Data Dictionary Location 代表电脑存储 Zotero 数据的位置，包括条目数据、附带的笔记以及 PDF 附件等等，上一步使用 InfiniCLOUD 也是同步的该文件夹的内容。
 
-*Note: “Data Dictionary Location” means the place in your computer you want to store your Zotero data (everything in Zotero, such as items info, items pdf attachments, other attachments, and ...).*
+{{<figure src="/wiki/zotero-7.png">}}
 
-{{<figure src="/wiki/zotero-tip-5.jpg" caption="Figure 5.Advanced settings1">}}
+{{<figure src="/wiki/zotero-8.png">}}
 
-{{<figure src="/wiki/zotero-tip-6.jpg" caption="Figure 6.Advanced settings2">}}
+## Plugins
 
-## Advanced Settings: Add-on
+Tools → Plugins
 
-Click the **Add-on** in **Tools**. Figure 7 showed the add-on extensions I used. All of them are excellent add-on extensions!
+{{<figure src="/wiki/zotero-9.png">}}
 
-*Note: Figure 7.1 recorded the Better BibTex Settings in my Zotero.*
+### Green Frog
 
-{{<figure src="/wiki/zotero-tip-7.jpg" caption="Figure 7.Add-on">}}
+{{<figure src="/wiki/zotero-10.png">}}
 
-{{<figure src="/wiki/zotero-tip-7-1.jpg" caption="Figure 7.1.Better BibTex Settings">}}
+{{<figure src="/wiki/zotero-11.png">}}
 
-```
-[year][auth:lower]'_'[shorttitle1_0:lower]
-year + auth(n=0,m=1,creator="*",initials=false).fold.lower + "'_'" + shorttitle(1,0).lower
-```
+### Reading List
+
+{{<figure src="/wiki/zotero-12.png">}}
+
+### Translate
+
+{{<figure src="/wiki/zotero-13.png">}}
+
+{{<figure src="/wiki/zotero-14.png">}}
 
 # Basic function
 
-## Output reference
+## 导出引文
 
-- Export references
+方式1：导航栏
 
-	- Method 1: After selecting an item, click Edit
+{{<figure src="/wiki/zotero-15.png">}}
 
-	{{<figure src="/wiki/zotero-tip-8.jpg" caption="Figure 8">}}
-
-	```
+```markdown
 	  	***Copy citation (复制引注)***
 	
 	  	(Beffel & Nuttall, 2020)
@@ -90,25 +87,21 @@ year + auth(n=0,m=1,creator="*",initials=false).fold.lower + "'_'" + shorttitle(
 	  	**copy reference list (复制参考文献表)**
 	
 	  	Beffel, J. H., & Nuttall, A. K. (2020). Influences of parentification and benefit finding on prosocial behavior among typically developing siblings of individuals with autism spectrum disorder. *Research in Developmental Disabilities*, *104*, 103694. <https://doi.org/10.1016/j.ridd.2020.103694>
-	```
+```
 
-	- Method 2: After selecting an item, right click
+方式2：选择条目后右击
+	
+{{<figure src="/wiki/zotero-16.jpg">}}
+	
+{{<figure src="/wiki/zotero-17.jpg">}}
 
-	{{<figure src="/wiki/zotero-tip-9.jpg" caption="Figure 9">}}
+{{<figure src="/wiki/zotero-18.jpg">}}
 
-	{{<figure src="/wiki/zotero-tip-10.jpg" caption="Figure 10">}}
+{{<figure src="/wiki/zotero-19.jpg">}}
 
-- Delete local files while deleting attachments
+## 查看条目在哪一个组
 
-	{{<figure src="/wiki/zotero-tip-11.jpg" caption="Figure 11">}}
-
-- Show items from sub-collections
-
-	{{<figure src="/wiki/zotero-tip-12.jpg" caption="Figure 12">}}
-
-## See item in which group
-
-Just select the item, and then press “Ctrl”.
+选择该条目之后按 Ctrl 键
 
 # Reference
 
