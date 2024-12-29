@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wiki on Haiyan Kong | 孔海燕</title><link>/wiki/</link><description>Recent content in Wiki on Haiyan Kong | 孔海燕</description><generator>Hugo</generator><language>en-us</language><atom:link href="/wiki/index.xml" rel="self" type="application/rss+xml"/><item><title>Android 软件</title><link>/wiki/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/wiki/android-app/</guid><description>本文内容：安卓手机的 APP 安装备忘录
-APP 列表 [Download Link] F-Droid [Download Link] Uptodown [Download Link] 简单水印 [Download Link] LocalSend [Download Link] Stitch [Download Link] 纯记账 [Download Link] FreeOTP+ Google Authenticator Wear OS 白描证件照【收费】【买断制，手机号登录】 Clash 杂项 国行三星手机安装谷歌件套 安装 Uptodown App Store
+APP 列表 [Download Link] F-Droid
+[Download Link] Uptodown
+[Download Link] 简单水印
+[Download Link] LocalSend
+[Download Link] Stitch
+[Download Link] 纯记账
+[Download Link] FreeOTP+
+Google Authenticator
+Wear OS
+白描证件照【收费】【买断制，手机号登录】
+Clash
+Todo 还未用过的软件
+OnTime：通过颜色显示倒计时，F-Droid 可以下载 PicGuard Pro：给图片添加水印，F-Droid 可以下载 杂项 国行三星手机安装谷歌件套 安装 Uptodown App Store
 首先在 uptodown-android 下载 Uptodown App Store 的 apk 然后安装在手机上。
 安装 Google Mobile Services (GMS)
 在 Uptodown App Store 里面安装 Google Mobile Services (GMS)。
-安装 Google Play
-安装 Google Mobile Services (GMS) 之后, 继续在 Uptodown App Store 里面安装 Google Play。</description></item><item><title>CN 格式</title><link>/wiki/cn-writing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/wiki/cn-writing/</guid><description> 本文内容：中文写作备忘录
+安装 Google Play</description></item><item><title>CN 格式</title><link>/wiki/cn-writing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/wiki/cn-writing/</guid><description> 本文内容：中文写作备忘录
 空格的用法 加空格 中文与英文之间
 中文与数字之间
 数字与英文单位之间
@@ -39,7 +50,7 @@ https://colorbrewer2.org/#type=sequential&amp;amp;scheme=BuGn&amp;amp;n=3</descr
 toc = true tocBorder = true Details Click me A lot of text or something else. {&amp;lt; details summary=&amp;#34;Click me&amp;#34; &amp;gt;} A lot of text or something else. {&amp;lt; /details &amp;gt;} Styles /config.toml
 appearance = &amp;#34;auto&amp;#34; you can change it to 2 predefined styles: light and dark. It can be also set to auto and the color scheme will match the user&amp;rsquo;s system style.</description></item><item><title>MATLAB 笔记</title><link>/wiki/matlan-note/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/wiki/matlan-note/</guid><description>本文内容：MATLAB 笔记
 各种乱七八糟还没整理的东西 20211107 %% MATLAB 学习笔记 20211107 % MATLAB 简介 % 特点 % 区分大小写 % 优先列的语言——数据提取 % 注意事项 % set path——default（e.g., SPM 和 EEGlab 会冲突); % 当前路径——数据所在的路径 % 格式 % *.m “代码文件”; % *.mat/.txt &amp;#34;数据文件&amp;#34; %% 常用命令(该行命令结果不在命令窗口中显示) clear % 清除工作空间中的所有变量 clear x % 清除工作空间中的变量x clc % 清屏 help % 帮助 pwd % 当前工作路径 who % 查看工作空间中的变量 whos % 查看工作空间中变量的详细信息 %% 数学运算 1+1; 2-1; 2*1; 1/2; % 四则运算 2^3; % n次幂 x=16; sqrt(x); x^(1/2); % x 的平方根 exp(x) % 自然对数e的x次幂 log(x) % 以自然对数e为底的对数函数 log10(x) % 以10为底的对数函数 abs(x) % 求x的绝对值 mod(x,n) % x除以n的余数 mod(9,2)=1 round(x) % 对x四舍五入 round(1.</description></item><item><title>MATLAB 速查</title><link>/wiki/matlab-quick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/wiki/matlab-quick/</guid><description>本文内容：MATLAB 速查
-画图 % ≥ MATLAB 2018b %% 给图形窗口添加一个总标题 sgtitle(&amp;#39;Title&amp;#39;); %% 打开旧版本 MATLAB 画的图 open(&amp;#39;path\\picture.fig&amp;#39;); 清理 close % 清除 workspace clc % 清除 command Windows close all %关闭所有图片 keep = {&amp;#39;hdr&amp;#39;, &amp;#39;data&amp;#39;}; clearvars(&amp;#39;-except&amp;#39;, keep{:}); % 保留变量 hdr 和 data，其余清除 clearvars -except hdr data % 保留变量 hdr 和 data，其余清除 存储 save(&amp;#39;D:\\\\appendix\\\\data.mat&amp;#39;, ‘variables’); % D:\\\\appendix\\\\data.mat 存储路径 % variables 要存储的变量 save(&amp;#39;D:\\\\appendix\\\\data.mat&amp;#39;); % 存储 workspace 的所有变量 拼接 %% 1. 使用方括号 `[ ]` 进行拼接 % 这种方式简单直接，适用于连接少量字符串 str1 = &amp;#39;Hello&amp;#39;; str2 = &amp;#39;World&amp;#39;; combined_str = [str1, str2]; % 结果为 &amp;#39;HelloWorld&amp;#39; path = [&amp;#39;D:/appendix/data/&amp;#39;, subj{i},&amp;#39;/&amp;#39;,run{i},&amp;#39;.</description></item><item><title>Python 速查</title><link>/wiki/python-quick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/wiki/python-quick/</guid><description>本文内容：Python 速查
+画图 % ≥ MATLAB 2018b %% 给图形窗口添加一个总标题 sgtitle(&amp;#39;Title&amp;#39;); %% 打开旧版本 MATLAB 画的图 open(&amp;#39;path\\picture.fig&amp;#39;); 清理 close % 清除 workspace clc % 清除 command Windows close all %关闭所有图片 keep = {&amp;#39;hdr&amp;#39;, &amp;#39;data&amp;#39;}; clearvars(&amp;#39;-except&amp;#39;, keep{:}); % 保留变量 hdr 和 data，其余清除 clearvars -except hdr data % 保留变量 hdr 和 data，其余清除 存储 save(&amp;#39;D:\\\\appendix\\\\data.mat&amp;#39;, ‘variables’); % D:\\\\appendix\\\\data.mat 存储路径 % variables 要存储的变量 save(&amp;#39;D:\\\\appendix\\\\data.mat&amp;#39;); % 存储 workspace 的所有变量 拼接 %% 1. `fullfile` 函数 % 专门用于拼接文件路径的函数，会自动根据操作系统选择正确的路径分隔符 folder = &amp;#39;C:\Users\Username\Documents&amp;#39;; filename = &amp;#39;data.</description></item><item><title>Python 速查</title><link>/wiki/python-quick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/wiki/python-quick/</guid><description>本文内容：Python 速查
 import os.path as op import os import sys import pandas as pd import numpy as np import mne 获取代码路径 import os os.getcwd() 打印出分割线 print(&amp;#39;-&amp;#39; * 50) 绘图后端 将 Matplotlib 的后端设置为使用 Qt5Agg 后端 # pip install matplotlib import matplotlib matplotlib.use(&amp;#39;Qt5Agg&amp;#39;) 将绘图后端设置为默认后端（Agg） # pip install matplotlib import matplotlib matplotlib.use(&amp;#39;Agg&amp;#39;) 画图说明：qt 代表画出来，inline 代表画在里面 %matplotlib qt %matplotlib inline 清除全局变量 globals().clear() 查看函数 mne.Epochs? 数据读取与预览代码 获取原始数据 data = raw.get_data() print(data) 行列 几行几列 data.shape 前几行 data.</description></item><item><title>R 速查</title><link>/wiki/r-quick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/wiki/r-quick/</guid><description>本文内容：R 速查
 教程 格拉斯哥大学心理系教程 psyTeachR 北京大学李东风R语言教程 R 语言教程 Learning R: 2019 Summer Workshop for NYU CDSC Lab Packages Figure 11
 Figure 12

@@ -1,5 +1,5 @@
 <!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本文内容：MATLAB 速查
-画图 % ≥ MATLAB 2018b %% 给图形窗口添加一个总标题 sgtitle('Title'); %% 打开旧版本 MATLAB 画的图 open('path\\picture.fig'); 清理 close % 清除 workspace clc % 清除 command Windows close all %关闭所有图片 keep = {'hdr', 'data'}; clearvars('-except', keep{:}); % 保留变量 hdr 和 data，其余清除 clearvars -except hdr data % 保留变量 hdr 和 data，其余清除 存储 save('D:\\\\appendix\\\\data.mat', ‘variables’); % D:\\\\appendix\\\\data.mat 存储路径 % variables 要存储的变量 save('D:\\\\appendix\\\\data.mat'); % 存储 workspace 的所有变量 拼接 %% 1. 使用方括号 `[ ]` 进行拼接 % 这种方式简单直接，适用于连接少量字符串 str1 = 'Hello'; str2 = 'World'; combined_str = [str1, str2]; % 结果为 'HelloWorld' path = ['D:/appendix/data/', subj{i},'/',run{i},'."><title>MATLAB 速查
+画图 % ≥ MATLAB 2018b %% 给图形窗口添加一个总标题 sgtitle('Title'); %% 打开旧版本 MATLAB 画的图 open('path\\picture.fig'); 清理 close % 清除 workspace clc % 清除 command Windows close all %关闭所有图片 keep = {'hdr', 'data'}; clearvars('-except', keep{:}); % 保留变量 hdr 和 data，其余清除 clearvars -except hdr data % 保留变量 hdr 和 data，其余清除 存储 save('D:\\\\appendix\\\\data.mat', ‘variables’); % D:\\\\appendix\\\\data.mat 存储路径 % variables 要存储的变量 save('D:\\\\appendix\\\\data.mat'); % 存储 workspace 的所有变量 拼接 %% 1. `fullfile` 函数 % 专门用于拼接文件路径的函数，会自动根据操作系统选择正确的路径分隔符 folder = 'C:\Users\Username\Documents'; filename = 'data."><title>MATLAB 速查
 </title><link rel="shortcut icon" type=image/x-icon href=/><link rel=stylesheet href=/css/main.203b37d6b9131e94bf52e5169faa8e5e485631fc518328c69f9471b2f18f8ae4db253e67772fe80a77ebd14c6200b931137373c03a0286cb7a5ce24936c6ea8f.css integrity="sha512-IDs31rkTHpS/UuUWn6qOXkhWMfxRgyjGn5RxsvGPiuTbJT5ndy/oCnfr0UxiALkxE3NzwDoChst6XOJJNsbqjw=="></head><body a=light><main class=page-content aria-label=Content><div class=w><a href=/wiki/>Wiki◀</a><article><center><h1>MATLAB 速查</h1></center><aside class=toc><nav id=TableOfContents><ul><li><a href=#画图>画图</a></li><li><a href=#清理>清理</a></li><li><a href=#存储>存储</a></li><li><a href=#拼接>拼接</a></li><li><a href=#查看变量类型>查看变量类型</a></li><li><a href=#寻找函数位置>寻找函数位置</a></li><li><a href=#写-function>写 function</a></li><li><a href=#教程>教程</a></li><li><a href=#杂项>杂项</a><ul><li><a href=#matlab-warning-saving-variables-to-older-mat-file-versions>MATLAB warning: saving variables to older MAT-file versions</a></li></ul></li></ul></nav></aside><hr><blockquote><p>本文内容：MATLAB 速查</p></blockquote><h1 id=画图>画图</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span><span style=color:#0f0>% ≥ MATLAB 2018b</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#0f0>%% 给图形窗口添加一个总标题</span>
@@ -23,57 +23,41 @@
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>save(<span style=color:#87ceeb>&#39;D:\\\\appendix\\\\data.mat&#39;</span>);
 </span></span><span style=display:flex><span><span style=color:#0f0>% 存储 workspace 的所有变量</span>
-</span></span></code></pre></div><h1 id=拼接>拼接</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span><span style=color:#0f0>%% 1. 使用方括号 `[ ]` 进行拼接</span>
+</span></span></code></pre></div><h1 id=拼接>拼接</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span><span style=color:#0f0>%% 1.  `fullfile` 函数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 专门用于拼接文件路径的函数，会自动根据操作系统选择正确的路径分隔符</span>
+</span></span><span style=display:flex><span>folder = <span style=color:#87ceeb>&#39;C:\Users\Username\Documents&#39;</span>;
+</span></span><span style=display:flex><span>filename = <span style=color:#87ceeb>&#39;data.txt&#39;</span>;
+</span></span><span style=display:flex><span>fullpath = fullfile(folder, filename); <span style=color:#0f0>% C:\Users\Username\Documents\data.txt</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% 这种方式简单直接，适用于连接少量字符串</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>str1 = <span style=color:#87ceeb>&#39;Hello&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 2. `strcat` 函数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 用于拼接字符串，并且会去除尾部空格，但不自动处理路径分隔符</span>
+</span></span><span style=display:flex><span>str1 = <span style=color:#87ceeb>&#39;Hello &#39;</span>;
 </span></span><span style=display:flex><span>str2 = <span style=color:#87ceeb>&#39;World&#39;</span>;
-</span></span><span style=display:flex><span>combined_str = [str1, str2];  <span style=color:#0f0>% 结果为 &#39;HelloWorld&#39;</span>
+</span></span><span style=display:flex><span>result = strcat(str1, str2); <span style=color:#0f0>% HelloWorld</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>path = [<span style=color:#87ceeb>&#39;D:/appendix/data/&#39;</span>, subj{i},<span style=color:#87ceeb>&#39;/&#39;</span>,run{i},<span style=color:#87ceeb>&#39;.ds&#39;</span>];
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>%% 2. 使用 `strcat` 函数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 3. 方括号 `[ ]` </span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 直接将字符串连接在一起，但不会自动去除空格，也不会像 fullfile 自动处理路径分隔符</span>
+</span></span><span style=display:flex><span>folder = <span style=color:#87ceeb>&#39;C:\Users\Username\Documents&#39;</span>;
+</span></span><span style=display:flex><span>filename = <span style=color:#87ceeb>&#39;data.txt&#39;</span>;
+</span></span><span style=display:flex><span>fullpath = [folder, <span style=color:#87ceeb>&#39;\&#39;</span>, filename]; <span style=color:#0f0>% C:\Users\Username\Documents\data.txt</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% `strcat` 函数可以接受多个输入参数，并按顺序连接它们</span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% 注意，`strcat` 在处理字符数组时需要注意维度匹配问题</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>str1 = <span style=color:#87ceeb>&#39;Hello&#39;</span>;
-</span></span><span style=display:flex><span>str2 = <span style=color:#87ceeb>&#39;World&#39;</span>;
-</span></span><span style=display:flex><span>combined_str = strcat(str1, str2);  <span style=color:#0f0>% 结果为 &#39;HelloWorld&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 4. `sprintf` 函数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 用于格式化字符串，并将结果作为返回值，可以控制输出的格式（例如小数点位数、对齐、填充等）</span>
+</span></span><span style=display:flex><span>x = <span style=color:#f60>3.14159</span>;
+</span></span><span style=display:flex><span>str1 = [ <span style=color:#87ceeb>&#39;Value of x: &#39;</span>, num2str(x) ];  <span style=color:#0f0>% Value of x: 3.14159</span>
+</span></span><span style=display:flex><span>str2 = sprintf(<span style=color:#87ceeb>&#39;Value of x: %.2f&#39;</span>, x);  <span style=color:#0f0>% Value of x: 3.14</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>path = strcat(<span style=color:#87ceeb>&#39;D:/appendix/data/&#39;</span>, subj{i},<span style=color:#87ceeb>&#39;/&#39;</span>,run{i},<span style=color:#87ceeb>&#39;.ds&#39;</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>%% 3. 使用 `sprintf` 函数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>%% 5. `join` 函数</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>% 用于连接字符串数组或单元格数组，可以方便地插入分隔符，并且是处理多个字符串时的推荐方法</span>
+</span></span><span style=display:flex><span>strArray = [&#34;apple&#34;, &#34;banana&#34;, &#34;cherry&#34;];
+</span></span><span style=display:flex><span>result = join(strArray, &#34; | &#34;); <span style=color:#0f0>% apple | banana | cherry</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% `sprintf` 可以像C语言的 `printf` 一样格式化输出，也可以用来拼接字符串</span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% 这种方式可以更灵活地控制输出格式，但相对于简单拼接来说稍显复杂</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>str1 = <span style=color:#87ceeb>&#39;Hello&#39;</span>;
-</span></span><span style=display:flex><span>str2 = <span style=color:#87ceeb>&#39;World&#39;</span>;
-</span></span><span style=display:flex><span>combined_str = sprintf(<span style=color:#87ceeb>&#39;%s%s&#39;</span>, str1, str2);  <span style=color:#0f0>% 结果为 &#39;HelloWorld&#39;</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>path = sprintf(<span style=color:#87ceeb>&#39;D:/appendix/data/%s/%s.ds&#39;</span>, subj{i},run{i});
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>%% 4. 使用字符串数组</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% 如果有多个字符串需要拼接，可以使用字符串数组进行操作</span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% 这种方法适合需要处理多行文本的情况</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>str1 = <span style=color:#87ceeb>&#39;Hello&#39;</span>;
-</span></span><span style=display:flex><span>str2 = <span style=color:#87ceeb>&#39;World&#39;</span>;
-</span></span><span style=display:flex><span>str_array = [str1; str2];  <span style=color:#0f0>% 创建字符串数组</span>
-</span></span><span style=display:flex><span>combined_str = strjoin(str_array);  <span style=color:#0f0>% 默认按行拼接，结果为 &#39;HelloWorld&#39;</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>%% 5. 使用 `join` 函数</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% `join` 函数可以用指定的分隔符将字符串数组或单元数组连接起来</span>
-</span></span><span style=display:flex><span><span style=color:#0f0>% 可以通过指定分隔符参数来进行自定义拼接</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>str1 = <span style=color:#87ceeb>&#39;Hello&#39;</span>;
-</span></span><span style=display:flex><span>str2 = <span style=color:#87ceeb>&#39;World&#39;</span>;
-</span></span><span style=display:flex><span>str_array = {str1, str2};  <span style=color:#0f0>% 创建单元数组</span>
-</span></span><span style=display:flex><span>combined_str = join(str_array);  <span style=color:#0f0>% 默认使用空格拼接，结果为 &#39;Hello World&#39;</span>
+</span></span><span style=display:flex><span>strArray = [&#34;apple&#34;, &#34;banana&#34;, &#34;cherry&#34;];
+</span></span><span style=display:flex><span>result = join(strArray); <span style=color:#0f0>% applebananacherry</span>
 </span></span></code></pre></div><h1 id=查看变量类型>查看变量类型</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span>class(variables) <span style=color:#0f0>% ‘variables’ 要查看的变量</span>
 </span></span></code></pre></div><h1 id=寻找函数位置>寻找函数位置</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span>which getAppDir  <span style=color:#0f0>% 寻找 getAppDir 位置</span>
 </span></span></code></pre></div><h1 id=写-function>写 function</h1><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=display:flex><span><span style=color:red>function</span> [ c ] = <span style=color:#ff0>qpfh</span>( a,b )
