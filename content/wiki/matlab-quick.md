@@ -48,57 +48,41 @@ save('D:\\\\appendix\\\\data.mat');
 # 拼接
 
 ```matlab
-%% 1. 使用方括号 `[ ]` 进行拼接
+%% 1.  `fullfile` 函数
+% 专门用于拼接文件路径的函数，会自动根据操作系统选择正确的路径分隔符
+folder = 'C:\Users\Username\Documents';
+filename = 'data.txt';
+fullpath = fullfile(folder, filename); % C:\Users\Username\Documents\data.txt
 
-% 这种方式简单直接，适用于连接少量字符串
 
-str1 = 'Hello';
+%% 2. `strcat` 函数
+% 用于拼接字符串，并且会去除尾部空格，但不自动处理路径分隔符
+str1 = 'Hello ';
 str2 = 'World';
-combined_str = [str1, str2];  % 结果为 'HelloWorld'
+result = strcat(str1, str2); % HelloWorld
 
-path = ['D:/appendix/data/', subj{i},'/',run{i},'.ds'];
 
-%% 2. 使用 `strcat` 函数
+%% 3. 方括号 `[ ]` 
+% 直接将字符串连接在一起，但不会自动去除空格，也不会像 fullfile 自动处理路径分隔符
+folder = 'C:\Users\Username\Documents';
+filename = 'data.txt';
+fullpath = [folder, '\', filename]; % C:\Users\Username\Documents\data.txt
 
-% `strcat` 函数可以接受多个输入参数，并按顺序连接它们
-% 注意，`strcat` 在处理字符数组时需要注意维度匹配问题
 
-str1 = 'Hello';
-str2 = 'World';
-combined_str = strcat(str1, str2);  % 结果为 'HelloWorld'
+%% 4. `sprintf` 函数
+% 用于格式化字符串，并将结果作为返回值，可以控制输出的格式（例如小数点位数、对齐、填充等）
+x = 3.14159;
+str1 = [ 'Value of x: ', num2str(x) ];  % Value of x: 3.14159
+str2 = sprintf('Value of x: %.2f', x);  % Value of x: 3.14
 
-path = strcat('D:/appendix/data/', subj{i},'/',run{i},'.ds');
 
-%% 3. 使用 `sprintf` 函数
+%% 5. `join` 函数
+% 用于连接字符串数组或单元格数组，可以方便地插入分隔符，并且是处理多个字符串时的推荐方法
+strArray = ["apple", "banana", "cherry"];
+result = join(strArray, " | "); % apple | banana | cherry
 
-% `sprintf` 可以像C语言的 `printf` 一样格式化输出，也可以用来拼接字符串
-% 这种方式可以更灵活地控制输出格式，但相对于简单拼接来说稍显复杂
-
-str1 = 'Hello';
-str2 = 'World';
-combined_str = sprintf('%s%s', str1, str2);  % 结果为 'HelloWorld'
-
-path = sprintf('D:/appendix/data/%s/%s.ds', subj{i},run{i});
-
-%% 4. 使用字符串数组
-
-% 如果有多个字符串需要拼接，可以使用字符串数组进行操作
-% 这种方法适合需要处理多行文本的情况
-
-str1 = 'Hello';
-str2 = 'World';
-str_array = [str1; str2];  % 创建字符串数组
-combined_str = strjoin(str_array);  % 默认按行拼接，结果为 'HelloWorld'
-
-%% 5. 使用 `join` 函数
-
-% `join` 函数可以用指定的分隔符将字符串数组或单元数组连接起来
-% 可以通过指定分隔符参数来进行自定义拼接
-
-str1 = 'Hello';
-str2 = 'World';
-str_array = {str1, str2};  % 创建单元数组
-combined_str = join(str_array);  % 默认使用空格拼接，结果为 'Hello World'
+strArray = ["apple", "banana", "cherry"];
+result = join(strArray); % applebananacherry
 ```
 
 # 查看变量类型

@@ -10,16 +10,33 @@ tocBorder: true
 # APP 列表
 
 - [[Download Link]](https://f-droid.org/zh_Hans/packages/) F-Droid
+
 - [[Download Link]](https://cn.uptodown.com/windows) Uptodown
+
 - [[Download Link]](https://github.com/rosuH/EasyWatermark/blob/master/README_zh-CN.md) 简单水印
+
 - [[Download Link]](https://localsend.org/zh-CN) LocalSend
+
 - [[Download Link]](https://github.com/ekibun/Stitch) Stitch
+
 - [[Download Link]](https://www.chunjizhang.com/) 纯记账
+
 - [[Download Link]](https://github.com/helloworld1/FreeOTPPlus) FreeOTP+
+
 - Google Authenticator
+
 - Wear OS
+
 - 白描证件照【收费】【买断制，手机号登录】
+
 - Clash
+
+# Todo
+
+还未用过的软件
+- OnTime：通过颜色显示倒计时，F-Droid 可以下载
+- PicGuard Pro：给图片添加水印，F-Droid 可以下载
+
 
 # 杂项
 
