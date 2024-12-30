@@ -35,6 +35,7 @@ title = "Haiyan Kong | 孔海燕"
     ordered = false
 
 [params]
+  favicon = 'favicon.png'
   [params.theme_config]
     appearance = "light"
     date_format = "2006-01-02"
